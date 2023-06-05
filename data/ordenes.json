@@ -1,0 +1,42 @@
+[
+    {
+        "fecha": "25/03/23",
+        "origen": "Resistencia",
+        "destino": [
+            "Corrientes",
+            "Empedrado"
+        ],
+        "colchones": [
+            {
+                "marca": "Canon",
+                "tipo": "2 plazas",
+                "posicion": "A5",
+                "medida": "2x2"
+            }
+        ],
+        "logistica": {
+            "distribucion": [
+                "Resistencia",
+                "Corrientes",
+                "Empedrado"
+            ],
+            "costo": "500000",
+            "tiempo": "27hs",
+            "capacidad": "10 Colchones"
+        }
+    },
+    {
+        "fecha": "26/06/2023",
+        "origen": "Resistencia",
+        "destino": "Corrientes, Empedrado",
+        "colchones": "5",
+        "logistica": "1"
+    },
+    {
+        "fecha": "07/06/2023",
+        "origen": "Resistencia",
+        "destino": "Corrientes, Empedrado",
+        "colchones": "12",
+        "logistica": "1"
+    }
+]
