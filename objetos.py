@@ -1,6 +1,6 @@
 class Colchon:
-    def __init__(self,ID_Colchon, marca, tipo, posicion, medida):
-        self.ID_Colchon = ID_Colchon
+    def __init__(self,id, marca, tipo, posicion, medida):
+        self.id = id
         self.marca = marca
         self.tipo = tipo
         self.posicion = posicion

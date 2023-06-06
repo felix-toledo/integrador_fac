@@ -40,6 +40,9 @@ def add_colchon():
     messagebox.showinfo("Colchon agregado", colchon_details)
 
 def select_colchones():
+    with open('./data/colchones.json') as json_file:
+        colchones = json.load(json_file)
+        
     selected_colchones = []
 
     def add_colchon():
@@ -62,8 +65,10 @@ def select_colchones():
     tree.heading("Posición", text="Posición")
     tree.heading("Medida", text="Medida")
 
-    for i, colchon in enumerate(colchones):
-        tree.insert("", "end", values=(colchon["ID_Colchon"], colchon["marca"], colchon["tipo"], colchon["posicion"], colchon["medida"]))
+    for i, colchon_data in enumerate(colchones):
+        colchon = Colchon(colchon_data["id"], colchon_data["marca"], colchon_data["tipo"], colchon_data["posicion"], colchon_data["medida"])
+        tree.insert("", "end", values=(colchon.id, colchon.marca, colchon.tipo, colchon.posicion, colchon.medida))
+
 
     tree.pack()
 
