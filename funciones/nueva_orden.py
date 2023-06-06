@@ -4,6 +4,8 @@ import tkinter as tk;
 from tkinter import ttk;
 from tkinter import messagebox;
 from funciones.stock_colchones import select_colchones;
+from funciones.abm_vehiculos import select_vehiculos;
+from funciones.logistica import generar_logistica;
 
 fecha_entry = None 
 origen_entry = None
@@ -11,6 +13,7 @@ destino_entry = None
 colchones_entry = None 
 logistica_entry = None
 colchonesElegidos = None
+vehiculoElegido = None
 
 with open('./data/ordenes.json') as json_file:
     ordenes = json.load(json_file)
@@ -26,10 +29,12 @@ def submit_order():
         colchones = select_colchones();
     else:
         colchones = colchonesElegidos;
+    print(vehiculoElegido)
+    vehiculo = vehiculoElegido;
     logistica = logistica_entry.get()
 
-    print(colchones);
-    ordenes.append(Orden(id, fecha, origen, destino, colchones, logistica))
+    generar_logistica(origen, destino, colchones, vehiculo)
+    ordenes.append(Orden(id, fecha, origen, destino, colchones, vehiculo, logistica))
 
     # Convertir el objeto "ordenes" a formato JSON
     ordenes_json = json.dumps(ordenes, default=lambda o: o.__dict__, indent=4)
@@ -48,6 +53,10 @@ def submit_order():
 def colchones_elegidos():
     global colchonesElegidos;
     colchonesElegidos = select_colchones();
+
+def vehiculo_elegido():
+    global vehiculoElegido;
+    vehiculoElegido = select_vehiculos();
 
 def ventana_orden(window):
     global fecha_entry,origen_entry, destino_entry, colchones_entry, logistica_entry
@@ -77,6 +86,13 @@ def ventana_orden(window):
     colchones_entry.pack()
     add_colchon_button = tk.Button(window, text="Importar colchon", command=colchones_elegidos)
     add_colchon_button.pack()
+
+    vehiculos_label = tk.Label(window, text="Vehículo:")
+    vehiculos_label.pack()
+    vehiculos_entry = tk.Entry(window)
+    vehiculos_entry.pack()
+    add_vehilcle_button = tk.Button(window, text="Importar Vehículo", command=vehiculo_elegido)
+    add_vehilcle_button.pack()
 
     logistica_label = tk.Label(window, text="Logistica:")
     logistica_label.pack()

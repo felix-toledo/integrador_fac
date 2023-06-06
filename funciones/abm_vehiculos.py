@@ -11,7 +11,6 @@ unidad_entry = None
 marca_entry = None
 modelo_entry = None
 cdg_entry = None
-
 # Store the orders in a Python array
 vehiculos = data;
 
@@ -39,6 +38,49 @@ def add_colchon():
     vehiculos_details = f"Unidad: {unidad}\nMarca: {marca}\Modelo: {modelo}\nCapacidad de carga: {cdg}"
     messagebox.showinfo("Vehiculo agregado", vehiculos_details)
 
+def select_vehiculos():
+    with open('./data/vehiculos.json') as json_file:
+        vehiculos = json.load(json_file)
+        
+    selected_vehiculos = []
+
+    def add_vehicle():
+        selected_vehiculos.append(tree.item(tree.focus())['values'])
+        print(selected_vehiculos)
+        state_lavel.config(text="Agregado")
+
+    def finish_selection():
+        selector_vehiculos.destroy()
+
+    selector_vehiculos = tk.Tk()
+    selector_vehiculos.title("Elegir Vehiculos")
+    selector_vehiculos.geometry("1250x500")
+    selector_vehiculos.wm_iconbitmap('camion.ico')
+
+    tree = ttk.Treeview(selector_vehiculos, columns=("ID","Unidad", "Marca", "Modelo"))
+    tree.heading("ID", text="ID")
+    tree.heading("Unidad", text="Unidad")
+    tree.heading("Marca", text="Marca")
+    tree.heading("Modelo", text="Modelo")
+
+
+    for i, vehiculos_data in enumerate(vehiculos):
+        vehiculo = Vehiculo(vehiculos_data["id"], vehiculos_data["unidad"], vehiculos_data["marca"], vehiculos_data["modelo"],vehiculos_data["capacidadDeCarga"],vehiculos_data["consumo"])
+        tree.insert("", "end", values=(vehiculo.id, vehiculo.unidad, vehiculo.marca, vehiculo.modelo))
+
+    tree.pack()
+
+    add_button = ttk.Button(selector_vehiculos, text="Agregar Vehiculo", command=add_vehicle)
+    add_button.pack()
+
+    finish_button = ttk.Button(selector_vehiculos, text="Terminar selección", command=finish_selection)
+    finish_button.pack()
+
+    state_lavel = ttk.Label(selector_vehiculos, text="");
+    state_lavel.pack()
+
+    
+    return selected_vehiculos;
 
 def abm_vehiculos_window(window):
     global unidad_entry, marca_entry, modelo_entry, cdg_entry

@@ -7,12 +7,13 @@ class Colchon:
         self.medida = medida
         
 class Vehiculo:
-    def __init__(self,ID_Vehiculos, unidad, marca, modelo, capacidadDeCarga):
-        self.ID_Vehiculos = ID_Vehiculos
+    def __init__(self,id, unidad, marca, modelo, capacidadDeCarga, consumo):
+        self.id = id
         self.unidad = unidad
         self.marca = marca
         self.modelo = modelo
         self.capacidadDeCarga = capacidadDeCarga
+        self.consumo = consumo
         
 class Costo:
     def __init__(self,ID_Costo, salario, combustible):
@@ -29,10 +30,11 @@ class Logistica:
         self.capacidad = capacidad
 
 class Orden:
-    def __init__(self,ID_Orden, fecha, origen, destino, colchones, logistica):
+    def __init__(self,ID_Orden, fecha, origen, destino, colchones, vehiculo, logistica):
         self.ID_Orden = ID_Orden
         self.fecha = fecha
         self.origen = origen
         self.destino = destino
         self.colchones = colchones
+        self.vehiculo = vehiculo
         self.logistica = logistica
