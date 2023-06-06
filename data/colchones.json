@@ -2,99 +2,19 @@
     {
         "id": 1,
         "marca": "Canon",
-        "tipo": "2 Plazas",
-        "posicion": "A84",
-        "medida": "2x1.80"
+        "tipo": "2 PLAZAS",
+        "posicion": "A84"
     },
     {
         "id": 2,
-        "marca": "Simmons",
-        "tipo": "Queen",
-        "posicion": "C52",
-        "medida": "1.52x2.03"
+        "marca": "Raymundo",
+        "tipo": "2 PLAZAS",
+        "posicion": "A89"
     },
     {
         "id": 3,
-        "marca": "Sealy",
-        "tipo": "King",
-        "posicion": "B12",
-        "medida": "1.93x2.03"
-    },
-    {
-        "id": 4,
-        "marca": "Serta",
-        "tipo": "Individual",
-        "posicion": "D28",
-        "medida": "0.90x1.90"
-    },
-    {
-        "id": 5,
-        "marca": "Tempur-Pedic",
-        "tipo": "California King",
-        "posicion": "E15",
-        "medida": "1.83x2.13"
-    },
-    {
-        "id": 6,
-        "marca": "Beautyrest",
-        "tipo": "Matrimonial",
-        "posicion": "F42",
-        "medida": "1.35x1.90"
-    },
-    {
-        "id": 7,
-        "marca": "NuevaMarca",
-        "tipo": "NuevoTipo",
-        "posicion": "A89",
-        "medida": "190x80"
-    },
-    {
-        "id": 8,
-        "marca": "Marca",
-        "tipo": "ElnuevoTipo",
-        "posicion": "A89",
-        "medida": "80X52"
-    },
-    {
-        "id": 9,
-        "marca": "Marquita",
-        "tipo": "Tipito",
-        "posicion": "A58",
-        "medida": "90x60"
-    },
-    {
-        "id": 10,
-        "marca": "SieteTreinta",
-        "tipo": "2 Plazas y media",
-        "posicion": "C85",
-        "medida": "1.80x1.90"
-    },
-    {
-        "id": 11,
-        "marca": "TreintaYTres",
-        "tipo": "1 Plaza",
-        "posicion": "B58",
-        "medida": "0.9x2m"
-    },
-    {
-        "id": 12,
-        "marca": "sieteCuarenta",
-        "tipo": "1 plaza",
-        "posicion": "M92",
-        "medida": "2mx2m"
-    },
-    {
-        "id": 13,
-        "marca": "NuevoColchon",
-        "tipo": "SieteCincuenta",
-        "posicion": "M09",
-        "medida": "9X9"
-    },
-    {
-        "id": 14,
-        "marca": "asd",
-        "tipo": "dsa",
-        "posicion": "aaaaaa",
-        "medida": "aas"
+        "marca": "Felixito",
+        "tipo": "2 PLAZAS",
+        "posicion": "A95"
     }
 ]

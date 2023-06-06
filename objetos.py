@@ -1,10 +1,9 @@
 class Colchon:
-    def __init__(self,id, marca, tipo, posicion, medida):
+    def __init__(self,id, marca, tipo, posicion):
         self.id = id
         self.marca = marca
-        self.tipo = tipo
+        self.tipo = tipo 
         self.posicion = posicion
-        self.medida = medida
         
 class Vehiculo:
     def __init__(self,id, unidad, marca, modelo, capacidadDeCarga, consumo):

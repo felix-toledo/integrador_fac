@@ -54,7 +54,8 @@ def generar_logistica(origen, destino, colchones, vehiculo):
     print(origen)
     print(destino)
 
-    ruta, distancia = calculo_ruta(empresa, origen, [destino]);
+    destino = [word.strip() for word in destino.split(',')]
+    ruta, distancia = calculo_ruta(empresa, origen, destino);
     vehiculoUso = buscar_vehiculo(vehiculo[0]);
 
     consumoTotal = (distancia * vehiculoUso["consumo"]) / 100;

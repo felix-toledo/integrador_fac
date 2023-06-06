@@ -1,5 +1,5 @@
 #Esta función sirve para crear una nueva orden.
-
+from objetos import Colchon;
 from objetos import Orden;
 import json;
 import tkinter as tk;
@@ -57,10 +57,34 @@ def submit_order():
 def colchones_elegidos():
     global colchonesElegidos;
     colchonesElegidos = select_colchones();
+    
+def colchones_distribuir():
+    if colchonesElegidos == None:
+        messagebox.showinfo("NO HAY COLCHONES", 'Primero necesitas importar colchones')
+    else: 
+        window_colchones = tk.Tk();
+        window_colchones.title("Colchones a distribuir")
+        window_colchones.geometry("1250x500")
+        window_colchones.wm_iconbitmap('camion.ico')
 
+        tree = ttk.Treeview(window_colchones, columns=("ID","Marca", "Tipo", "Posición"))
+        tree.heading("ID", text="ID")
+        tree.heading("Marca", text="Marca")
+        tree.heading("Tipo", text="Tipo")
+        tree.heading("Posición", text="Posición")
+
+        for i, colchon_data in enumerate(colchonesElegidos):
+            colchon = Colchon(colchon_data[0], colchon_data[1], colchon_data[2], colchon_data[3])
+            tree.insert("", "end", values=(colchon.id, colchon.marca, colchon.tipo, colchon.posicion))
+
+        tree.pack()
+    
 def vehiculo_elegido():
     global vehiculoElegido;
-    vehiculoElegido = select_vehiculos();
+    if vehiculoElegido == None:
+        vehiculoElegido = select_vehiculos();
+    else:
+        messagebox.showinfo("Ya elegiste un vehiculo", vehiculoElegido[0])
 
 def ventana_orden(window):
     global fecha_entry,origen_entry, destino_entry, colchones_entry, logistica_entry
@@ -84,10 +108,10 @@ def ventana_orden(window):
     destino_entry = tk.Entry(window)
     destino_entry.pack()
 
-    colchones_label = tk.Label(window, text="Colchones:")
+    colchones_label = tk.Label(window, text='Colchones: ')
     colchones_label.pack()
-    colchones_entry = tk.Entry(window)
-    colchones_entry.pack()
+    lista_colchones = tk.Button(window, text="Colchones a distribuir", command=colchones_distribuir)
+    lista_colchones.pack()
     add_colchon_button = tk.Button(window, text="Importar colchon", command=colchones_elegidos)
     add_colchon_button.pack()
 

@@ -10,7 +10,6 @@ with open('./data/colchones.json') as json_file:
 marca_entry = None
 tipo_entry = None
 posicion_entry = None
-medida_entry = None
 
 # Store the orders in a Python array
 colchones = data;
@@ -21,9 +20,8 @@ def add_colchon():
     marca = marca_entry.get()
     tipo = tipo_entry.get()
     posicion = posicion_entry.get()
-    medida = medida_entry.get()
     
-    colchones.append(Colchon(id, marca, tipo, posicion, medida))
+    colchones.append(Colchon(id, marca, tipo, posicion))
 
     # Convertir el objeto "ordenes" a formato JSON
     colchones_json = json.dumps(colchones, default=lambda o: o.__dict__, indent=4)
@@ -36,7 +34,7 @@ def add_colchon():
         archivo.write(colchones_json)
     
     # Display the order details in a message box
-    colchon_details = f"Marca: {marca}\nTipo: {tipo}\nPosicion: {posicion}\nMedida: {medida}"
+    colchon_details = f"Marca: {marca}\nTipo: {tipo}\nPosicion: {posicion}"
     messagebox.showinfo("Colchon agregado", colchon_details)
 
 def select_colchones():
@@ -58,16 +56,15 @@ def select_colchones():
     selector_colchones.geometry("1250x500")
     selector_colchones.wm_iconbitmap('camion.ico')
 
-    tree = ttk.Treeview(selector_colchones, columns=("ID","Marca", "Tipo", "Posición", "Medida"))
+    tree = ttk.Treeview(selector_colchones, columns=("ID","Marca", "Tipo", "Posición"))
     tree.heading("ID", text="ID")
     tree.heading("Marca", text="Marca")
     tree.heading("Tipo", text="Tipo")
     tree.heading("Posición", text="Posición")
-    tree.heading("Medida", text="Medida")
 
     for i, colchon_data in enumerate(colchones):
-        colchon = Colchon(colchon_data["id"], colchon_data["marca"], colchon_data["tipo"], colchon_data["posicion"], colchon_data["medida"])
-        tree.insert("", "end", values=(colchon.id, colchon.marca, colchon.tipo, colchon.posicion, colchon.medida))
+        colchon = Colchon(colchon_data["id"], colchon_data["marca"], colchon_data["tipo"], colchon_data["posicion"])
+        tree.insert("", "end", values=(colchon.id, colchon.marca, colchon.tipo, colchon.posicion))
 
 
     tree.pack()
@@ -87,31 +84,27 @@ def select_colchones():
 
 
 def stock_colchones_window(window):
-    global marca_entry, tipo_entry, posicion_entry, medida_entry
+    global marca_entry, tipo_entry, posicion_entry
 
     # Create the form components
     titulo_label = tk.Label(window, text="ABM Colchones", font=("Arial", 16))
     titulo_label.pack()
 
-    marca_label = tk.Label(window, text="Marca:")
+    marca_label = tk.Label(window, text="Marca: ")
     marca_label.pack()
     marca_entry = tk.Entry(window)
     marca_entry.pack()
 
-    tipo_label = tk.Label(window, text="Tipo:")
+    tipo_label = tk.Label(window, text='Tipo: ')
     tipo_label.pack()
-    tipo_entry = tk.Entry(window)
+    tipo_values = ['1 PLAZA', '2 PLAZAS', '1.5 PLAZAS']
+    tipo_entry = ttk.Combobox(window, values=tipo_values)
     tipo_entry.pack()
 
     posicion_label = tk.Label(window, text="Posicion:")
     posicion_label.pack()
     posicion_entry = tk.Entry(window)
     posicion_entry.pack()
-
-    medida_label = tk.Label(window, text="Medida:")
-    medida_label.pack()
-    medida_entry = tk.Entry(window)
-    medida_entry.pack()
 
     new_colchon_button = tk.Button(window, text="Agregar Colchon", command=add_colchon)
     new_colchon_button.pack()
