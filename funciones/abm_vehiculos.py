@@ -46,7 +46,6 @@ def select_vehiculos():
 
     def add_vehicle():
         selected_vehiculos.append(tree.item(tree.focus())['values'])
-        print(selected_vehiculos)
         state_lavel.config(text="Agregado")
 
     def finish_selection():

@@ -29,7 +29,6 @@ def submit_order():
         colchones = select_colchones();
     else:
         colchones = colchonesElegidos;
-    print(vehiculoElegido)
     vehiculo = vehiculoElegido;
     logistica = logistica_entry.get()
 
