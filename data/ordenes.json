@@ -21,5 +21,28 @@
             ]
         ],
         "logistica": "1"
+    },
+    {
+        "ID_Orden": 2,
+        "fecha": "30/06/2023",
+        "origen": "Saladas",
+        "destino": "Empedrado",
+        "colchones": [
+            [
+                1,
+                "Canon",
+                "2 Plazas",
+                "A84",
+                "2x1.80"
+            ],
+            [
+                5,
+                "Tempur-Pedic",
+                "California King",
+                "E15",
+                "1.83x2.13"
+            ]
+        ],
+        "logistica": "1"
     }
 ]

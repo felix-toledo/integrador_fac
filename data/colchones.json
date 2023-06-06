@@ -40,5 +40,26 @@
         "tipo": "Matrimonial",
         "posicion": "F42",
         "medida": "1.35x1.90"
+    },
+    {
+        "ID_Colchon": 7,
+        "marca": "NuevaMarca",
+        "tipo": "NuevoTipo",
+        "posicion": "A89",
+        "medida": "190x80"
+    },
+    {
+        "ID_Colchon": 8,
+        "marca": "Marca",
+        "tipo": "ElnuevoTipo",
+        "posicion": "A89",
+        "medida": "80X52"
+    },
+    {
+        "ID_Colchon": 9,
+        "marca": "Marquita",
+        "tipo": "Tipito",
+        "posicion": "A58",
+        "medida": "90x60"
     }
 ]
