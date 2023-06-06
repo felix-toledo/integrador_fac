@@ -1,24 +1,35 @@
-from objetos import Orden, Colchon, Logistica;
+from objetos import Orden;
 import json;
 import tkinter as tk;
 from tkinter import ttk;
 from tkinter import messagebox;
+from funciones.stock_colchones import select_colchones;
+
+fecha_entry = None 
+origen_entry = None
+destino_entry = None
+colchones_entry = None 
+logistica_entry = None
+colchonesElegidos = None
 
 with open('./data/ordenes.json') as json_file:
     ordenes = json.load(json_file)
-    
-with open('./data/colchones.json') as json_file:
-    colchones = json.load(json_file)
+  
 
 def submit_order():
     # Get the values from the input fields
+    id = len(ordenes) + 1
     fecha = fecha_entry.get()
     origen = origen_entry.get()
     destino = destino_entry.get()
-    colchones = colchones_entry.get()
+    if colchonesElegidos == None:
+        colchones = select_colchones();
+    else:
+        colchones = colchonesElegidos;
     logistica = logistica_entry.get()
-    
-    ordenes.append(Orden(fecha, origen, destino, colchones, logistica))
+
+    print(colchones);
+    ordenes.append(Orden(id, fecha, origen, destino, colchones, logistica))
 
     # Convertir el objeto "ordenes" a formato JSON
     ordenes_json = json.dumps(ordenes, default=lambda o: o.__dict__, indent=4)
@@ -34,42 +45,43 @@ def submit_order():
     order_details = f"Fecha: {fecha}\nOrigen: {origen}\nDestino/s: {destino}\nColchones: {colchones}\nLogistica: {logistica}"
     messagebox.showinfo("Order Details", order_details)
 
-# Create the main window
-window = tk.Tk()
-window.title("Order Management")
+def colchones_elegidos():
+    global colchonesElegidos;
+    colchonesElegidos = select_colchones();
 
-# Create the form components
-titulo_label = tk.Label(window, text="Generar nueva orden", font=("Arial", 16))
-titulo_label.pack()
+def ventana_orden(window):
+    global fecha_entry,origen_entry, destino_entry, colchones_entry, logistica_entry
 
-fecha_label = tk.Label(window, text="Fecha:")
-fecha_label.pack()
-fecha_entry = tk.Entry(window)
-fecha_entry.pack()
+    # Create the form components
+    titulo_label = tk.Label(window, text="Generar nueva orden", font=("Arial", 16))
+    titulo_label.pack()
 
-origen_label = tk.Label(window, text="Origen:")
-origen_label.pack()
-origen_entry = tk.Entry(window)
-origen_entry.pack()
+    fecha_label = tk.Label(window, text="Fecha:")
+    fecha_label.pack()
+    fecha_entry = tk.Entry(window)
+    fecha_entry.pack()
 
-destino_label = tk.Label(window, text="Destino/s:")
-destino_label.pack()
-destino_entry = tk.Entry(window)
-destino_entry.pack()
+    origen_label = tk.Label(window, text="Origen:")
+    origen_label.pack()
+    origen_entry = tk.Entry(window)
+    origen_entry.pack()
 
-colchones_label = tk.Label(window, text="Colchones:")
-colchones_label.pack()
-colchones_entry = tk.Entry(window)
-colchones_entry.pack()
+    destino_label = tk.Label(window, text="Destino/s:")
+    destino_label.pack()
+    destino_entry = tk.Entry(window)
+    destino_entry.pack()
 
-logistica_label = tk.Label(window, text="Logistica:")
-logistica_label.pack()
-logistica_entry = tk.Entry(window)
-logistica_entry.pack()
+    colchones_label = tk.Label(window, text="Colchones:")
+    colchones_label.pack()
+    colchones_entry = tk.Entry(window)
+    colchones_entry.pack()
+    add_colchon_button = tk.Button(window, text="Importar colchon", command=colchones_elegidos)
+    add_colchon_button.pack()
 
-new_order_button = tk.Button(window, text="New Order", command=submit_order)
-new_order_button.pack()
+    logistica_label = tk.Label(window, text="Logistica:")
+    logistica_label.pack()
+    logistica_entry = tk.Entry(window)
+    logistica_entry.pack()
 
-# Start the main event loop
-window.mainloop()
-
+    new_order_button = tk.Button(window, text="New Order", command=submit_order)
+    new_order_button.pack()

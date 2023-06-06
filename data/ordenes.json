@@ -1,42 +1,25 @@
 [
     {
-        "fecha": "25/03/23",
+        "ID_Orden": 1,
+        "fecha": "28/05",
         "origen": "Resistencia",
-        "destino": [
-            "Corrientes",
-            "Empedrado"
-        ],
+        "destino": "San Juan",
         "colchones": [
-            {
-                "marca": "Canon",
-                "tipo": "2 plazas",
-                "posicion": "A5",
-                "medida": "2x2"
-            }
-        ],
-        "logistica": {
-            "distribucion": [
-                "Resistencia",
-                "Corrientes",
-                "Empedrado"
+            [
+                4,
+                "Serta",
+                "Individual",
+                "D28",
+                "0.90x1.90"
             ],
-            "costo": "500000",
-            "tiempo": "27hs",
-            "capacidad": "10 Colchones"
-        }
-    },
-    {
-        "fecha": "26/06/2023",
-        "origen": "Resistencia",
-        "destino": "Corrientes, Empedrado",
-        "colchones": "5",
-        "logistica": "1"
-    },
-    {
-        "fecha": "07/06/2023",
-        "origen": "Resistencia",
-        "destino": "Corrientes, Empedrado",
-        "colchones": "12",
+            [
+                6,
+                "Beautyrest",
+                "Matrimonial",
+                "F42",
+                "1.35x1.90"
+            ]
+        ],
         "logistica": "1"
     }
 ]

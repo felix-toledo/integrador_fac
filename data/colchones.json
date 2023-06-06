@@ -1,8 +1,44 @@
 [
     {
+        "ID_Colchon": 1,
         "marca": "Canon",
-        "tipo": "Jaja",
-        "posicion": "Posicion",
-        "medida": "Medida"
+        "tipo": "2 Plazas",
+        "posicion": "A84",
+        "medida": "2x1.80"
+    },
+    {
+        "ID_Colchon": 2,
+        "marca": "Simmons",
+        "tipo": "Queen",
+        "posicion": "C52",
+        "medida": "1.52x2.03"
+    },
+    {
+        "ID_Colchon": 3,
+        "marca": "Sealy",
+        "tipo": "King",
+        "posicion": "B12",
+        "medida": "1.93x2.03"
+    },
+    {
+        "ID_Colchon": 4,
+        "marca": "Serta",
+        "tipo": "Individual",
+        "posicion": "D28",
+        "medida": "0.90x1.90"
+    },
+    {
+        "ID_Colchon": 5,
+        "marca": "Tempur-Pedic",
+        "tipo": "California King",
+        "posicion": "E15",
+        "medida": "1.83x2.13"
+    },
+    {
+        "ID_Colchon": 6,
+        "marca": "Beautyrest",
+        "tipo": "Matrimonial",
+        "posicion": "F42",
+        "medida": "1.35x1.90"
     }
 ]
