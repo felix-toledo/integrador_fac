@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from funciones.nueva_orden import ventana_orden
 from funciones.stock_colchones import stock_colchones_window
+from funciones.abm_vehiculos import abm_vehiculos_window
 
 # Crear la ventana principal
 main_window = tk.Tk()
@@ -20,10 +21,13 @@ pestaña3 = ttk.Frame(pestanas)
 # Agregar contenido a las pestañas
 ventana_orden(pestaña1);
 stock_colchones_window(pestaña2);
+abm_vehiculos_window(pestaña3);
+
 
 # Agregar las pestañas al contenedor
 pestanas.add(pestaña1, text="Orden")
 pestanas.add(pestaña2, text="ABM Colchones")
+pestanas.add(pestaña3, text="ABM Vehiculos")
 
 # Empacar el contenedor de las pestañas
 pestanas.pack(expand=True, fill="both")

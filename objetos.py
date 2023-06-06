@@ -6,7 +6,7 @@ class Colchon:
         self.posicion = posicion
         self.medida = medida
         
-class Vehiculos:
+class Vehiculo:
     def __init__(self,ID_Vehiculos, unidad, marca, modelo, capacidadDeCarga):
         self.ID_Vehiculos = ID_Vehiculos
         self.unidad = unidad
