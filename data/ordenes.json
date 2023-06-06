@@ -303,5 +303,29 @@
             ]
         ],
         "logistica": "1"
+    },
+    {
+        "ID_Orden": 13,
+        "fecha": "60/54",
+        "origen": "Corrientes",
+        "destino": "Esquina",
+        "colchones": [
+            [
+                4,
+                "Serta",
+                "Individual",
+                "D28",
+                "0.90x1.90"
+            ]
+        ],
+        "vehiculo": [
+            [
+                2,
+                "HYUNDAI HD78",
+                "HYUNDAI",
+                2012
+            ]
+        ],
+        "logistica": "1"
     }
 ]

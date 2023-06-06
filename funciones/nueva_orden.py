@@ -1,3 +1,5 @@
+#Esta función sirve para crear una nueva orden.
+
 from objetos import Orden;
 import json;
 import tkinter as tk;
@@ -7,6 +9,7 @@ from funciones.stock_colchones import select_colchones;
 from funciones.abm_vehiculos import select_vehiculos;
 from funciones.logistica import generar_logistica;
 
+# Defino los entrys de manera global, ya que si no, estarían guardados dentro de una función y sería dificil acceder a ellos.
 fecha_entry = None 
 origen_entry = None
 destino_entry = None
@@ -15,23 +18,25 @@ logistica_entry = None
 colchonesElegidos = None
 vehiculoElegido = None
 
+# Traigo el json de ordenes.
 with open('./data/ordenes.json') as json_file:
     ordenes = json.load(json_file)
   
-
+# Función para mandar una orden nueva.
 def submit_order():
-    # Get the values from the input fields
+    # Traigo los valores de los inputs.
     id = len(ordenes) + 1
     fecha = fecha_entry.get()
     origen = origen_entry.get()
     destino = destino_entry.get()
-    if colchonesElegidos == None:
+    if colchonesElegidos == None: # Este if me va a obligar a seleccionar colchones en caso de que no lo haya hecho previamente.
         colchones = select_colchones();
     else:
         colchones = colchonesElegidos;
     vehiculo = vehiculoElegido;
     logistica = logistica_entry.get()
 
+    # Llamo a la función generar logística que esta dentro del archivo logistica.py
     generar_logistica(origen, destino, colchones, vehiculo)
     ordenes.append(Orden(id, fecha, origen, destino, colchones, vehiculo, logistica))
 
@@ -60,7 +65,7 @@ def vehiculo_elegido():
 def ventana_orden(window):
     global fecha_entry,origen_entry, destino_entry, colchones_entry, logistica_entry
 
-    # Create the form components
+    # Creo el form en la UI
     titulo_label = tk.Label(window, text="Generar nueva orden", font=("Arial", 16))
     titulo_label.pack()
 

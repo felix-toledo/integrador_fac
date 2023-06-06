@@ -1,3 +1,5 @@
+#Acá va a estar todo el código principal, este es el archivo que hay que ejecutar para iniciar el programa.
+
 import tkinter as tk
 from tkinter import ttk
 from funciones.nueva_orden import ventana_orden
@@ -18,7 +20,7 @@ pestaña1 = ttk.Frame(pestanas)
 pestaña2 = ttk.Frame(pestanas)
 pestaña3 = ttk.Frame(pestanas)
 
-# Agregar contenido a las pestañas
+# Agregar contenido a las pestañas, llamando a las funciones que estan dentro de la carpeta /funciones.
 ventana_orden(pestaña1);
 stock_colchones_window(pestaña2);
 abm_vehiculos_window(pestaña3);
