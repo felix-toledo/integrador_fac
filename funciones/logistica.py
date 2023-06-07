@@ -28,14 +28,15 @@ def definir_empresa():
     empresa.agregar_centro('Puerto Tirol')
 
     # Agregar conexiones entre centros de distribución
-    empresa.agregar_conexion('Resistencia', 'Corrientes', 34.3, con_peaje=True)
-    empresa.agregar_conexion('Puerto Tirol', 'Corrientes', 34.3, con_peaje=True)
-    empresa.agregar_conexion('Corrientes', 'Empedrado', 60, con_peaje=True)
+    empresa.agregar_conexion('Resistencia', 'Corrientes', 34.3, con_peaje=True) #PEAJE 700
+    empresa.agregar_conexion('Puerto Tirol', 'Corrientes', 34.3, con_peaje=True) #PEAJE 700
+    empresa.agregar_conexion('Corrientes', 'Empedrado', 60.8, con_peaje=True) #PEAJE 700
     empresa.agregar_conexion('Empedrado', 'Goya', 167)
-    empresa.agregar_conexion('Empedrado', 'Perugorria', 175)
-    empresa.agregar_conexion('Goya', 'Perugorria', 74.2)
+    empresa.agregar_conexion('Empedrado', 'Perugorria', 174)
+    empresa.agregar_conexion('Goya', 'Perugorria', 73.2)
     empresa.agregar_conexion('Perugorria', 'Esquina', 194)
-    empresa.agregar_conexion('Goya', 'Esquina', 110)
+    empresa.agregar_conexion('Goya', 'Esquina', 110.7)
+    empresa.agregar_conexion('Esquina','Corrientes', 387, con_peaje=True)
 
     return(empresa);
 

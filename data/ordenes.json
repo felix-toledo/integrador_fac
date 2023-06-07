@@ -668,5 +668,28 @@
             ]
         ],
         "logistica": ""
+    },
+    {
+        "ID_Orden": 27,
+        "fecha": "85",
+        "origen": "Resistencia",
+        "destino": "Goya",
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": ""
     }
 ]

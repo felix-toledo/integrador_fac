@@ -94,5 +94,22 @@
         },
         "tiempo": 6.478571428571429,
         "capacidad": "95.55 m3"
+    },
+    {
+        "id": 7,
+        "distribucion": [
+            "Resistencia",
+            "Corrientes",
+            "Empedrado",
+            "Goya"
+        ],
+        "costo": {
+            "salario": 1797.257142857143,
+            "combustible": 28080.0835,
+            "peaje": 1,
+            "viatico": 936.0714285714287
+        },
+        "tiempo": 3.7442857142857147,
+        "capacidad": 95.55
     }
 ]
