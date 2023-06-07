@@ -5,7 +5,8 @@
         "marca": "MERCEDES BENZ",
         "modelo": "2022",
         "capacidadDeCarga": "15.40 m3",
-        "consumo": 9.5
+        "consumo": 9.5,
+        "velocidadMedia": 80
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "marca": "HYUNDAI",
         "modelo": "2012",
         "capacidadDeCarga": "9.90 m3",
-        "consumo": 11
+        "consumo": 11,
+        "velocidadMedia": 75
     },
     {
         "id": 3,
@@ -21,6 +23,7 @@
         "marca": "SCANIA",
         "modelo": "2007",
         "capacidadDeCarga": "95.55 m3",
-        "consumo": 35
+        "consumo": 35,
+        "velocidadMedia": 60
     }
 ]

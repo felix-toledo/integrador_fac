@@ -1,11 +1,18 @@
 from funciones.calculoDistancia import Empresa, calcular_ruta_mas_corta
 import json
+import tkinter as tk;
+from objetos import Logistica
+from objetos import Costo
 
-precioNaftaXLitro = 245;
-
+precioNaftaXLitro = 306.1;
+gananciaXHora = 480;
 
 with open('./data/vehiculos.json') as json_file:
     vehiculos = json.load(json_file)
+
+with open('./data/logisticas.json') as json_file:
+    logisticas = json.load(json_file)
+
 
 def definir_empresa():
     # Crear una instancia de la clase Empresa
@@ -18,24 +25,26 @@ def definir_empresa():
     empresa.agregar_centro('Perugorria')
     empresa.agregar_centro('Goya')
     empresa.agregar_centro('Esquina')
+    empresa.agregar_centro('Puerto Tirol')
 
     # Agregar conexiones entre centros de distribución
-    empresa.agregar_conexion('Resistencia', 'Corrientes', 34.3)
-    empresa.agregar_conexion('Corrientes', 'Empedrado', 60)
+    empresa.agregar_conexion('Resistencia', 'Corrientes', 34.3, con_peaje=True)
+    empresa.agregar_conexion('Puerto Tirol', 'Corrientes', 34.3, con_peaje=True)
+    empresa.agregar_conexion('Corrientes', 'Empedrado', 60, con_peaje=True)
     empresa.agregar_conexion('Empedrado', 'Goya', 167)
     empresa.agregar_conexion('Empedrado', 'Perugorria', 175)
     empresa.agregar_conexion('Goya', 'Perugorria', 74.2)
     empresa.agregar_conexion('Perugorria', 'Esquina', 194)
-    empresa.agregar_conexion('Goya', 'Esquina', 266)
+    empresa.agregar_conexion('Goya', 'Esquina', 110)
 
     return(empresa);
 
 # Llamar a la función calcular_ruta_mas_corta
 def calculo_ruta(empresa, origen, destino):
-    ruta, distancia = calcular_ruta_mas_corta(empresa, origen, destino)
+    ruta, distancia, peaje = calcular_ruta_mas_corta(empresa, origen, destino)
     if ruta is not None:
         print("Ruta más corta:", ruta, "Distancia total:", distancia)
-        return(ruta, distancia)
+        return(ruta, distancia, peaje)
     else:
         print("No se encontró una ruta válida para los destinos especificados.")
         return ("No se encontró una ruta válida para los destinos especificados.", 0)
@@ -54,16 +63,51 @@ def generar_logistica(origen, destino, colchones, vehiculo):
     print(origen)
     print(destino)
 
+    
+    id = len(logisticas)+1;
     destino = [word.strip() for word in destino.split(',')]
-    ruta, distancia = calculo_ruta(empresa, origen, destino);
+    ruta, distancia, peajes = calculo_ruta(empresa, origen, destino);
     vehiculoUso = buscar_vehiculo(vehiculo[0]);
 
     consumoTotal = (distancia * vehiculoUso["consumo"]) / 100;
     precioNafta = precioNaftaXLitro * consumoTotal;
-    print(consumoTotal);
-    print(precioNafta);
+    horasViaje = distancia / vehiculoUso["velocidadMedia"];
+    viaticos = (horasViaje / 8) * 2000;
+    descansos = int(horasViaje/12);
+    if descansos > 1:
+        horasViaje = horasViaje + (8*descansos)
+    salario = gananciaXHora * horasViaje;
+    
+    costo = Costo(salario, precioNafta, peajes ,viaticos)
+    
     print(ruta);
+    print(costo);
+    print(horasViaje);
+    print(vehiculoUso["capacidadDeCarga"]);
 
+    logistica = Logistica(id, ruta, costo, horasViaje, vehiculoUso["capacidadDeCarga"])
+    logisticas.append(logistica)
+
+    # Convertir el objeto "ordenes" a formato JSON
+    logisticas_json = json.dumps(logisticas, default=lambda o: o.__dict__, indent=4)
+
+    # Especificar la ruta del archivo JSON
+    ruta_archivo = "./data/logisticas.json"
+
+    # Guardar el objeto "ordenes" en el archivo JSON
+    with open(ruta_archivo, "w") as archivo:
+        archivo.write(logisticas_json)
+        
+    ventana_logistica(logistica)
+
+def ventana_logistica(logistica):
+    window = tk.Tk()
+    window.title("EXUN S.A.")
+    window.geometry("1250x500")
+    window.wm_iconbitmap('camion.ico')
+    
+    
+    
     
     
 

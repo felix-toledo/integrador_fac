@@ -6,23 +6,25 @@ class Colchon:
         self.posicion = posicion
         
 class Vehiculo:
-    def __init__(self,id, unidad, marca, modelo, capacidadDeCarga, consumo):
+    def __init__(self,id, unidad, marca, modelo, capacidadDeCarga, consumo, velocidadMedia):
         self.id = id
         self.unidad = unidad
         self.marca = marca
         self.modelo = modelo
         self.capacidadDeCarga = capacidadDeCarga
         self.consumo = consumo
+        self.velocidad = velocidadMedia
         
 class Costo:
-    def __init__(self,ID_Costo, salario, combustible):
-        self.ID_Costo = ID_Costo
+    def __init__(self, salario, combustible, peaje, viatico):
         self.salario = salario
         self.combustible = combustible
+        self.peaje = peaje
+        self.viatico = viatico
 
 class Logistica:
-    def __init__(self,ID_Logistica, distribucion, costo, tiempo, capacidad):
-        self.ID_Logistica = ID_Logistica
+    def __init__(self,id, distribucion, costo, tiempo, capacidad):
+        self.id = id
         self.distribucion = distribucion
         self.costo = costo
         self.tiempo = tiempo

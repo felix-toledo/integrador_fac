@@ -67,7 +67,7 @@ def select_vehiculos():
 
 
     for i, vehiculos_data in enumerate(vehiculos):
-        vehiculo = Vehiculo(vehiculos_data["id"], vehiculos_data["unidad"], vehiculos_data["marca"], vehiculos_data["modelo"],vehiculos_data["capacidadDeCarga"],vehiculos_data["consumo"])
+        vehiculo = Vehiculo(vehiculos_data["id"], vehiculos_data["unidad"], vehiculos_data["marca"], vehiculos_data["modelo"],vehiculos_data["capacidadDeCarga"],vehiculos_data["consumo"],vehiculos_data["velocidadMedia"])
         tree.insert("", "end", values=(vehiculo.id, vehiculo.unidad, vehiculo.marca, vehiculo.modelo))
 
     tree.pack()

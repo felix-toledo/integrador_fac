@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "distribucion": "SPRINTER 516 CDI FURGON 4325XL",
+        "costo": "MERCEDES BENZ",
+        "tiempo": "2022",
+        "capacidad": "15.40 m3"
+    },
+    {
+        "id": 2,
+        "distribucion": [
+            "Resistencia",
+            "Corrientes",
+            "Empedrado",
+            "Perugorria"
+        ],
+        "costo": {
+            "salario": 1615.8,
+            "combustible": 6267.9575,
+            "peaje": 1,
+            "viatico": 841.5625
+        },
+        "tiempo": 3.36625,
+        "capacidad": "15.40 m3"
+    },
+    {
+        "id": 3,
+        "distribucion": [
+            "Corrientes",
+            "Empedrado"
+        ],
+        "costo": {
+            "salario": 360.0,
+            "combustible": 1396.5,
+            "peaje": 1,
+            "viatico": 187.5
+        },
+        "tiempo": 0.75,
+        "capacidad": "15.40 m3"
+    },
+    {
+        "id": 4,
+        "distribucion": [
+            "Resistencia",
+            "Corrientes",
+            "Empedrado",
+            "Perugorria",
+            "Goya",
+            "Esquina"
+        ],
+        "costo": {
+            "salario": 4876.0,
+            "combustible": 65298.7825,
+            "peaje": 2,
+            "viatico": 2539.5833333333335
+        },
+        "tiempo": 10.158333333333333,
+        "capacidad": "95.55 m3"
+    }
+]

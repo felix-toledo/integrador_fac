@@ -66,7 +66,6 @@ def select_colchones():
         colchon = Colchon(colchon_data["id"], colchon_data["marca"], colchon_data["tipo"], colchon_data["posicion"])
         tree.insert("", "end", values=(colchon.id, colchon.marca, colchon.tipo, colchon.posicion))
 
-
     tree.pack()
 
     add_button = ttk.Button(selector_colchones, text="Agregar colchón", command=add_colchon)
@@ -97,7 +96,7 @@ def stock_colchones_window(window):
 
     tipo_label = tk.Label(window, text='Tipo: ')
     tipo_label.pack()
-    tipo_values = ['1 PLAZA', '2 PLAZAS', '1.5 PLAZAS']
+    tipo_values = ['1 PLAZA', '1.5 PLAZAS', '2 PLAZAS']
     tipo_entry = ttk.Combobox(window, values=tipo_values)
     tipo_entry.pack()
 
