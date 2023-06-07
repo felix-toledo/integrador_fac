@@ -16,5 +16,11 @@
         "marca": "Felixito",
         "tipo": "2 PLAZAS",
         "posicion": "A95"
+    },
+    {
+        "id": 4,
+        "marca": "PiuLucia",
+        "tipo": "1 PLAZA",
+        "posicion": "A54"
     }
 ]

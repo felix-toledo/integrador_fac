@@ -49,7 +49,10 @@ def select_vehiculos():
         state_lavel.config(text="Agregado")
 
     def finish_selection():
+        from funciones.nueva_orden import vehiculo_ya_elegido;
         selector_vehiculos.destroy()
+        vehiculo_ya_elegido();
+
 
     selector_vehiculos = tk.Tk()
     selector_vehiculos.title("Elegir Vehiculos")

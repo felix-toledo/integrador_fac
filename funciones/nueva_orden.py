@@ -17,6 +17,7 @@ colchones_entry = None
 logistica_entry = None
 colchonesElegidos = None
 vehiculoElegido = None
+vehiculo_elegido_label = None
 
 # Traigo el json de ordenes.
 with open('./data/ordenes.json') as json_file:
@@ -84,10 +85,15 @@ def vehiculo_elegido():
     if vehiculoElegido == None:
         vehiculoElegido = select_vehiculos();
     else:
-        messagebox.showinfo("Ya elegiste un vehiculo", vehiculoElegido[0])
+        vehiculoElegido = select_vehiculos();
+
+def vehiculo_ya_elegido():
+    global vehiculo_elegido_label
+    vehiculo_elegido_label.config(text=vehiculoElegido[0][1])
+
 
 def ventana_orden(window):
-    global fecha_entry,origen_entry, destino_entry, colchones_entry, logistica_entry
+    global fecha_entry,origen_entry, destino_entry, colchones_entry, logistica_entry, vehiculo_elegido_label
 
     # Creo el form en la UI
     titulo_label = tk.Label(window, text="Generar nueva orden", font=("Arial", 16))
@@ -117,8 +123,8 @@ def ventana_orden(window):
 
     vehiculos_label = tk.Label(window, text="Vehículo:")
     vehiculos_label.pack()
-    vehiculos_entry = tk.Entry(window)
-    vehiculos_entry.pack()
+    vehiculo_elegido_label = tk.Label(window, text="")
+    vehiculo_elegido_label.pack()
     add_vehilcle_button = tk.Button(window, text="Importar Vehículo", command=vehiculo_elegido)
     add_vehilcle_button.pack()
 

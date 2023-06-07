@@ -466,5 +466,34 @@
             ]
         ],
         "logistica": "1"
+    },
+    {
+        "ID_Orden": 19,
+        "fecha": "30/07/2023",
+        "origen": "Corrientes",
+        "destino": "Goya",
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ],
+            [
+                2,
+                "Raymundo",
+                "2 PLAZAS",
+                "A89"
+            ]
+        ],
+        "vehiculo": [
+            [
+                1,
+                "SPRINTER 516 CDI FURGON 4325XL",
+                "MERCEDES BENZ",
+                2022
+            ]
+        ],
+        "logistica": "1"
     }
 ]
