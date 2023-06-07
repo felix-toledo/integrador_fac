@@ -4,7 +4,7 @@
         "unidad": "SPRINTER 516 CDI FURGON 4325XL",
         "marca": "MERCEDES BENZ",
         "modelo": "2022",
-        "capacidadDeCarga": "15.40 m3",
+        "capacidadDeCarga": 15.40,
         "consumo": 9.5,
         "velocidadMedia": 80
     },
@@ -13,7 +13,7 @@
         "unidad": "HYUNDAI HD78",
         "marca": "HYUNDAI",
         "modelo": "2012",
-        "capacidadDeCarga": "9.90 m3",
+        "capacidadDeCarga": 9.90,
         "consumo": 11,
         "velocidadMedia": 75
     },
@@ -22,8 +22,8 @@
         "unidad": "TRACTOR SCANIA R340",
         "marca": "SCANIA",
         "modelo": "2007",
-        "capacidadDeCarga": "95.55 m3",
+        "capacidadDeCarga": 95.55,
         "consumo": 35,
-        "velocidadMedia": 60
+        "velocidadMedia": 70
     }
 ]

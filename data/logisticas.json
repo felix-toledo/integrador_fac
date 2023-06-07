@@ -56,5 +56,43 @@
         },
         "tiempo": 10.158333333333333,
         "capacidad": "95.55 m3"
+    },
+    {
+        "id": 5,
+        "distribucion": [
+            "Resistencia",
+            "Corrientes",
+            "Empedrado",
+            "Perugorria",
+            "Goya",
+            "Esquina"
+        ],
+        "costo": {
+            "salario": 3628.0,
+            "combustible": 48585.7225,
+            "peaje": 2,
+            "viatico": 1889.5833333333335
+        },
+        "tiempo": 7.558333333333334,
+        "capacidad": "95.55 m3"
+    },
+    {
+        "id": 6,
+        "distribucion": [
+            "Resistencia",
+            "Corrientes",
+            "Empedrado",
+            "Perugorria",
+            "Goya",
+            "Esquina"
+        ],
+        "costo": {
+            "salario": 3109.714285714286,
+            "combustible": 48585.7225,
+            "peaje": 2,
+            "viatico": 1619.642857142857
+        },
+        "tiempo": 6.478571428571429,
+        "capacidad": "95.55 m3"
     }
 ]
