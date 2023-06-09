@@ -2,7 +2,8 @@ from funciones.calculoDistancia import Empresa, calcular_ruta_mas_corta
 import json
 import tkinter as tk;
 from objetos import Logistica
-from objetos import Costo
+from objetos import Costo;
+from objetos import Orden;
 
 precioNaftaXLitro = 306.1;
 gananciaXHora = 480;
@@ -19,16 +20,14 @@ def definir_empresa():
     empresa = Empresa()
 
     # Agregar centros de distribución
-    empresa.agregar_centro('Resistencia')
+    empresa.agregar_centro('Puerto Tirol')
     empresa.agregar_centro('Corrientes')
     empresa.agregar_centro('Empedrado')
     empresa.agregar_centro('Perugorria')
     empresa.agregar_centro('Goya')
     empresa.agregar_centro('Esquina')
-    empresa.agregar_centro('Puerto Tirol')
-
+    
     # Agregar conexiones entre centros de distribución
-    empresa.agregar_conexion('Resistencia', 'Corrientes', 34.3, con_peaje=True) #PEAJE 700
     empresa.agregar_conexion('Puerto Tirol', 'Corrientes', 34.3, con_peaje=True) #PEAJE 700
     empresa.agregar_conexion('Corrientes', 'Empedrado', 60.8, con_peaje=True) #PEAJE 700
     empresa.agregar_conexion('Empedrado', 'Goya', 167)
@@ -66,8 +65,10 @@ def generar_logistica(origen, destino, colchones, vehiculo):
 
     
     id = len(logisticas)+1;
-    destino = [word.strip() for word in destino.split(',')]
-    ruta, distancia, peajes = calculo_ruta(empresa, origen, destino);
+    nombresDestino = []
+    for sublist in destino:
+        nombresDestino.append(sublist[0])
+    ruta, distancia, peajes = calculo_ruta(empresa, origen, nombresDestino);
     vehiculoUso = buscar_vehiculo(vehiculo[0]);
 
     consumoTotal = (distancia * vehiculoUso["consumo"]) / 100;
@@ -99,13 +100,10 @@ def generar_logistica(origen, destino, colchones, vehiculo):
     with open(ruta_archivo, "w") as archivo:
         archivo.write(logisticas_json)
         
-    ventana_logistica(logistica)
+    return(logistica);
 
-def ventana_logistica(logistica):
-    window = tk.Tk()
-    window.title("EXUN S.A.")
-    window.geometry("1250x500")
-    window.wm_iconbitmap('camion.ico')
+
+
     
     
     

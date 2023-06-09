@@ -14,7 +14,13 @@ class Vehiculo:
         self.capacidadDeCarga = capacidadDeCarga
         self.consumo = consumo
         self.velocidad = velocidadMedia
-        
+
+class Destino:
+    def __init__(self, nombre, carga, descarga):
+        self.nombre = nombre;
+        self.carga = carga;
+        self.descarga = descarga;
+
 class Costo:
     def __init__(self, salario, combustible, peaje, viatico):
         self.salario = salario
@@ -31,8 +37,8 @@ class Logistica:
         self.capacidad = capacidad
 
 class Orden:
-    def __init__(self,ID_Orden, fecha, origen, destino, colchones, vehiculo, logistica):
-        self.ID_Orden = ID_Orden
+    def __init__(self,id, fecha, origen, destino, colchones, vehiculo, logistica):
+        self.id = id
         self.fecha = fecha
         self.origen = origen
         self.destino = destino

@@ -691,5 +691,99 @@
             ]
         ],
         "logistica": ""
+    },
+    {
+        "ID_Orden": 28,
+        "fecha": "28/05",
+        "origen": "Resistencia",
+        "destino": "Corrientes, Empedrado, Goya",
+        "colchones": [
+            [
+                1,
+                "Canon",
+                "2 PLAZAS",
+                "A84"
+            ],
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": ""
+    },
+    {
+        "ID_Orden": 29,
+        "fecha": "28/05",
+        "origen": "Resistencia",
+        "destino": "Empedrado",
+        "colchones": [],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": ""
+    },
+    {
+        "id": 30,
+        "fecha": "123",
+        "origen": "Corrientes",
+        "destino": [
+            [
+                "Empedrado",
+                "12",
+                "12"
+            ],
+            [
+                "Perugorria",
+                "12",
+                "12"
+            ]
+        ],
+        "colchones": [
+            [
+                2,
+                "Raymundo",
+                "2 PLAZAS",
+                "A89"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 12,
+            "distribucion": [
+                "Corrientes",
+                "Empedrado",
+                "Perugorria"
+            ],
+            "costo": {
+                "salario": 1610.057142857143,
+                "combustible": 25155.298000000003,
+                "peaje": 1,
+                "viatico": 838.5714285714287
+            },
+            "tiempo": 3.3542857142857145,
+            "capacidad": 95.55
+        }
     }
 ]
