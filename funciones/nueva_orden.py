@@ -56,36 +56,69 @@ def detalles_orden_window(orden):
     ruta_label = tk.Label(window, text=textoRuta)
     ruta_label.pack()
 
+    textoTiempo = 'Tiempo estimado: '+ str(int(orden.logistica.tiempo)) +"HS"
+    textoTiempo_label = tk.Label(window, text=textoTiempo)
+    textoTiempo_label.pack()
+
+    textoDistancia = 'Distancia: '+ str(int(orden.logistica.distancia)) +"KM"
+    textoDistancia_label = tk.Label(window, text=textoDistancia)
+    textoDistancia_label.pack()
+
+    textoVehiculo = 'Vehiculo: ' + str(orden.vehiculo[0][1])
+    vehiculo_label = tk.Label(window, text=textoVehiculo)
+    vehiculo_label.pack()
+
     # Crear tabla
-    table_label = tk.Label(window, text="DISTRIBUCIÓN", font=("Arial", 12));
+    table_label = tk.Label(window, text="DISTRIBUCIÓN", font=("Arial", 12))
     table_label.pack();
     tree = ttk.Treeview(window)
-    tree["columns"] = ("Ciudad", "Cantidad a Descargar", "Tipo a Descargar", "Tipo a Cargar", "Cantidad a Cargar")
+    tree["columns"] = ("Ciudad", "Cantidad a Descargar", "Tipo a Descargar", "Cantidad a Cargar", "Tipo a Cargar")
 
 
     # Definir encabezados de columna
     tree.heading("Ciudad", text="Ciudad")
     tree.heading("Cantidad a Descargar", text="Cantidad a Descargar")
     tree.heading("Tipo a Descargar", text="Tipo a Descargar")
-    tree.heading("Tipo a Cargar", text="Tipo a Cargar")
     tree.heading("Cantidad a Cargar", text="Cantidad a Cargar")
-
+    tree.heading("Tipo a Cargar", text="Tipo a Cargar")
     # Agregar datos a la tabla
+    print(orden.logistica.destinos)
     for item in orden.logistica.destinos:
         ciudad = item[0]
         cantidad_descargar = int(item[5][1])
         tipo_descargar = item[4]
-        tipo_cargar = item[2]
         cantidad_cargar = int(item[5][0])
-        tree.insert("", "end", values=(ciudad, cantidad_descargar, tipo_descargar, tipo_cargar, cantidad_cargar))
+        tipo_cargar = item[2]
+        tree.insert("", "end", values=(ciudad, cantidad_descargar, tipo_descargar, cantidad_cargar, tipo_cargar))
 
-    # Empaquetar tabla en la ventana
+    # Empaqueta la tabla en la ventana
     tree.pack()
 
-'''
-    new_order_button = tk.Button(window, text="New Order", command=submit_order)
-    new_order_button.pack()
-'''
+    costoLabel = tk.Label(window, text="COSTOS", font=("Arial", 12))
+    costoLabel.pack()
+    treeCosto = ttk.Treeview(window)
+    treeCosto["columns"] = ("Salario", "Combustible", "Peaje", "Viatico")
+    treeCosto.config(height=1)
+
+    # Define los encabezados de columna
+    treeCosto.heading("Salario", text="Salario")
+    treeCosto.heading("Combustible", text="Combustible")
+    treeCosto.heading("Peaje", text="Peaje")
+    treeCosto.heading("Viatico", text="Viatico")
+
+    # Obtiene los valores de los atributos del objeto Costo
+    salario = int(orden.logistica.costo.salario)
+    combustible = int(orden.logistica.costo.combustible)
+    peaje = int(orden.logistica.costo.peaje)
+    viatico = int(orden.logistica.costo.viatico)
+
+    # Agrega los datos a la tabla
+    treeCosto.insert("", "end", values=(salario, combustible, peaje, viatico))
+
+    
+    # Empaquetar tabla en la ventana
+    treeCosto.pack()
+
 
 # Traigo el json de ordenes.
 with open('./data/ordenes.json') as json_file:
@@ -120,9 +153,6 @@ def submit_order():
     with open(ruta_archivo, "w") as archivo:
         archivo.write(ordenes_json)
     
-    # Display the order details in a message box
-    order_details = f"Fecha: {fecha}\nOrigen: {origen}\nDestino/s: {destinos}\nColchones: {colchones}\nLogistica: {logistica}"
-    messagebox.showinfo("Order Details", order_details)
 
 def colchones_elegidos():
     global colchonesElegidos;

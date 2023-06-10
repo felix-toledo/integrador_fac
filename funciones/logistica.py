@@ -68,9 +68,15 @@ def calculo_carga_descarga(destinos,vehiculo):
             medida_colchon = 0.72
         elif tipo == "2 PLAZAS":    
             medida_colchon = 0.9
+        else:
+            medida_colchon = 1;
         return medida_colchon;
 
     for i in range(len(destinos)):
+        if destinos[i][1] =="":
+            destinos[i][1] = "00%";
+        if destinos[i][3] == "":
+            destinos[i][3] = "00%";
 
         porcentaje_carga = float(destinos[i][1].strip("%")) / 100
         porcentaje_descarga = float(destinos[i][3].strip("%")) / 100
@@ -84,7 +90,7 @@ def calculo_carga_descarga(destinos,vehiculo):
 
         destinos[i].append([total_colchones_carga, total_colchones_descarga])
 
-        return destinos;
+    return destinos;
 
 def generar_logistica(origen, destinos, colchones, vehiculo):
     empresa = definir_empresa();
@@ -108,7 +114,7 @@ def generar_logistica(origen, destinos, colchones, vehiculo):
     costo = Costo(salario, precioNafta, peajes ,viaticos)
     
 
-    logistica = Logistica(id, ruta, costo, horasViaje, vehiculoUso["capacidadDeCarga"], destinos)
+    logistica = Logistica(id, ruta, costo, horasViaje, vehiculoUso["capacidadDeCarga"], destinos,distancia)
     logisticas.append(logistica)
 
     # Convertir el objeto "ordenes" a formato JSON

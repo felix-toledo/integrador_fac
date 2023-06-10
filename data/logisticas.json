@@ -5,35 +5,39 @@
         "costo": "MERCEDES BENZ",
         "tiempo": "2022",
         "capacidad": "15.40 m3",
-        "destinos": null
+        "destinos": null,
+        "distancias": null
     },
     {
         "id": 2,
         "distribucion": [
+            "Puerto Tirol",
             "Corrientes",
-            "Empedrado"
+            "Empedrado",
+            "Perugorria"
         ],
         "costo": {
-            "salario": 416.9142857142857,
-            "combustible": 6513.808000000001,
+            "salario": 1845.257142857143,
+            "combustible": 28830.028500000004,
             "peaje": 1,
-            "viatico": 217.14285714285714
+            "viatico": 961.0714285714287
         },
-        "tiempo": 0.8685714285714285,
+        "tiempo": 3.8442857142857148,
         "capacidad": 95.55,
         "destinos": [
             [
-                "Empedrado",
-                "15%",
+                "Perugorria",
+                "20%",
                 "1.5 PLAZAS",
                 "25%",
-                "1 PLAZA",
+                "1.5 PLAZAS",
                 [
-                    19.444444444444446,
-                    38.983050847457626
+                    26.38888888888889,
+                    31.944444444444446
                 ]
             ]
-        ]
+        ],
+        "distancia": 269.1
     },
     {
         "id": 3,
@@ -67,60 +71,49 @@
             ],
             [
                 "Empedrado",
+                "00%",
                 "",
-                "",
-                "",
-                ""
+                "25%",
+                "1.5 PLAZAS",
+                [
+                    0.0,
+                    31.944444444444446
+                ]
             ],
             [
                 "Perugorria",
+                "00%",
                 "",
-                "",
-                "",
-                ""
-            ],
-            [
-                "Goya",
-                "",
-                "",
-                "",
-                ""
-            ],
-            [
-                "Esquina",
-                "",
-                "",
-                "",
-                ""
-            ]
-        ]
-    },
-    {
-        "id": 4,
-        "distribucion": [
-            "Puerto Tirol",
-            "Corrientes"
-        ],
-        "costo": {
-            "salario": 235.19999999999996,
-            "combustible": 3674.7305000000006,
-            "peaje": 1,
-            "viatico": 122.49999999999999
-        },
-        "tiempo": 0.48999999999999994,
-        "capacidad": 95.55,
-        "destinos": [
-            [
-                "Corrientes",
-                "15%",
-                "1.5 PLAZAS",
                 "15%",
                 "1.5 PLAZAS",
                 [
-                    19.444444444444446,
+                    0.0,
                     19.444444444444446
                 ]
+            ],
+            [
+                "Goya",
+                "05%",
+                "1.5 PLAZAS",
+                "30%",
+                "1.5 PLAZAS",
+                [
+                    5.555555555555555,
+                    38.88888888888889
+                ]
+            ],
+            [
+                "Esquina",
+                "05%",
+                "2 PLAZAS",
+                "100%",
+                "2 PLAZAS",
+                [
+                    4.444444444444445,
+                    105.55555555555556
+                ]
             ]
-        ]
+        ],
+        "distancia": 453.0
     }
 ]
