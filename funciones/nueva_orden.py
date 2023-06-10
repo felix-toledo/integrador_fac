@@ -20,6 +20,17 @@ colchonesElegidos = None
 vehiculoElegido = None
 vehiculo_elegido_label = None
 destinos_label = None
+destinos_window = None
+centros = None
+carga_entry = []
+descarga_entry = []
+distribuir_entry = []
+tipo_carga_entry = []
+tipo_descarga_entry = []
+destinos_seleccionados = [] 
+empresa = definir_empresa()
+centros = empresa.grafo.nodes
+
 
 def detalles_orden_window(orden):
 
@@ -45,7 +56,31 @@ def detalles_orden_window(orden):
     ruta_label = tk.Label(window, text=textoRuta)
     ruta_label.pack()
 
+    # Crear tabla
+    table_label = tk.Label(window, text="DISTRIBUCIÓN", font=("Arial", 12));
+    table_label.pack();
+    tree = ttk.Treeview(window)
+    tree["columns"] = ("Ciudad", "Cantidad a Descargar", "Tipo a Descargar", "Tipo a Cargar", "Cantidad a Cargar")
 
+
+    # Definir encabezados de columna
+    tree.heading("Ciudad", text="Ciudad")
+    tree.heading("Cantidad a Descargar", text="Cantidad a Descargar")
+    tree.heading("Tipo a Descargar", text="Tipo a Descargar")
+    tree.heading("Tipo a Cargar", text="Tipo a Cargar")
+    tree.heading("Cantidad a Cargar", text="Cantidad a Cargar")
+
+    # Agregar datos a la tabla
+    for item in orden.logistica.destinos:
+        ciudad = item[0]
+        cantidad_descargar = int(item[5][1])
+        tipo_descargar = item[4]
+        tipo_cargar = item[2]
+        cantidad_cargar = int(item[5][0])
+        tree.insert("", "end", values=(ciudad, cantidad_descargar, tipo_descargar, tipo_cargar, cantidad_cargar))
+
+    # Empaquetar tabla en la ventana
+    tree.pack()
 
 '''
     new_order_button = tk.Button(window, text="New Order", command=submit_order)
@@ -62,15 +97,15 @@ def submit_order():
     id = len(ordenes) + 1
     fecha = fecha_entry.get()
     origen = origen_entry.get()
-    destino = destinos_seleccionados
+    destinos = destinos_seleccionados
     if colchonesElegidos == None: # Este if me va a obligar a seleccionar colchones en caso de que no lo haya hecho previamente.
         colchones = select_colchones();
     else:
         colchones = colchonesElegidos;
     vehiculo = vehiculoElegido;
-    logistica = generar_logistica(origen, destino, colchones, vehiculo)
+    logistica = generar_logistica(origen, destinos, colchones, vehiculo)
 
-    orden = Orden(id, fecha, origen, destino, colchones, vehiculo, logistica)
+    orden = Orden(id, fecha, origen, destinos, colchones, vehiculo, logistica)
     # Llamo a la función generar logística que esta dentro del archivo logistica.py
     detalles_orden_window(orden);
     ordenes.append(orden)
@@ -86,7 +121,7 @@ def submit_order():
         archivo.write(ordenes_json)
     
     # Display the order details in a message box
-    order_details = f"Fecha: {fecha}\nOrigen: {origen}\nDestino/s: {destino}\nColchones: {colchones}\nLogistica: {logistica}"
+    order_details = f"Fecha: {fecha}\nOrigen: {origen}\nDestino/s: {destinos}\nColchones: {colchones}\nLogistica: {logistica}"
     messagebox.showinfo("Order Details", order_details)
 
 def colchones_elegidos():
@@ -125,32 +160,22 @@ def vehiculo_ya_elegido():
     global vehiculo_elegido_label
     vehiculo_elegido_label.config(text=vehiculoElegido[0][1])
 
-destinos_window = None
-centros = None
-carga_entry = []
-descarga_entry = []
-sino_entry = []
-destinos_seleccionados = []  # Variable global para almacenar los destinos seleccionados
-empresa = definir_empresa()
-centros = empresa.grafo.nodes
-
 def guardar_destinos():
     global destinos_label;
     destinos_seleccionados.clear()  # Limpiar la lista antes de guardar los destinos
     centros = list(empresa.grafo.nodes)  # Obtener la lista de centros de distribución
     for i in range(len(centros)):
-        if sino_entry[i].get() == "1":
+        if distribuir_entry[i].get() == "DISTRIBUIR":
             ciudad = centros[i]
             carga = carga_entry[i].get()
             descarga = descarga_entry[i].get()
-            destinos_seleccionados.append([ciudad, carga, descarga])
+            tipo_carga = tipo_carga_entry[i].get()
+            tipo_descarga = tipo_descarga_entry[i].get()
+            destinos_seleccionados.append([ciudad, carga, tipo_carga, descarga, tipo_descarga ])
         else:
             print('no entro')
     destinos_label.config(text=str(destinos_seleccionados))
     destinos_window.destroy()
-
-def acceder_destinos():
-    ventana_destinos()
 
 def ventana_destinos():
     global destinos_window, empresa, destinos_vars;
@@ -160,19 +185,34 @@ def ventana_destinos():
     destinos_vars = []  # Mover aquí la creación de las variables IntVar
     
     for i, centro in enumerate(centros):
-        sino_label = tk.Label(destinos_window, text=f"1. Si, 2.No:")
-        sino_entry.append(tk.Entry(destinos_window))
-        carga_label = tk.Label(destinos_window, text=f"Carga {centro}:")
-        carga_entry.append(tk.Entry(destinos_window))
-        descarga_label = tk.Label(destinos_window, text=f"Descarga {centro}:")
-        descarga_entry.append(tk.Entry(destinos_window))
-        
-        sino_label.grid(row=i, column=0, sticky=tk.W)
-        sino_entry[i].grid(row=i, column=1)
-        carga_label.grid(row=i, column=2)
-        carga_entry[i].grid(row=i, column=3)
-        descarga_label.grid(row=i, column=4)
-        descarga_entry[i].grid(row=i, column=5)
+        ciudad_label = tk.Label(destinos_window, text=f"{centro}", font=("Arial", 16))
+        distribuir_label = tk.Label(destinos_window, text=f"Distribuir?")
+        distribuye = ["DISTRIBUIR"]
+        distribuir_entry.append(ttk.Combobox(destinos_window, values=distribuye))
+        carga_label = tk.Label(destinos_window, text=f"Carga:")
+        valores_porcentajes = ["05%","10%","15%","20%","25%","30%","35%","40%","45%","50%","55%","60%","65%","70%","75%","80%","85%","90%","95%","100%"]
+        carga_entry.append(ttk.Combobox(destinos_window, values=valores_porcentajes))
+        descarga_label = tk.Label(destinos_window, text=f"Descarga:")
+        descarga_entry.append(ttk.Combobox(destinos_window, values=valores_porcentajes))
+        tipo_carga_label = tk.Label(destinos_window, text='Tipo de colchones de carga: ')
+        colchones_values = ['1 PLAZA', '1.5 PLAZAS', '2 PLAZAS']
+        tipo_carga_entry.append(ttk.Combobox(destinos_window, values=colchones_values))
+        tipo_descarga_label = tk.Label(destinos_window, text='Tipo de colchones de descarga: ')
+        tipo_descarga_entry.append(ttk.Combobox(destinos_window, values=colchones_values))
+
+        ciudad_label.grid(row=i, column=0, sticky=tk.W)
+        distribuir_label.grid(row=i, column=1, sticky=tk.W)
+        distribuir_entry[i].grid(row=i, column=2)
+        carga_label.grid(row=i, column=3)
+        carga_entry[i].grid(row=i, column=4)
+        descarga_label.grid(row=i, column=5)
+        descarga_entry[i].grid(row=i, column=6)
+        descarga_label.grid(row=i, column=7)
+        descarga_entry[i].grid(row=i, column=8)
+        tipo_carga_label.grid(row=i, column=9)
+        tipo_carga_entry[i].grid(row=i, column=10)
+        tipo_descarga_label.grid(row=i, column=11)
+        tipo_descarga_entry[i].grid(row=i, column=12)
     
     guardar_button = tk.Button(destinos_window, text="Guardar", command=guardar_destinos)
     guardar_button.grid(row=len(centros), column=0, columnspan=5)
@@ -197,7 +237,7 @@ def ventana_orden(window):
     origen_entry = tk.Entry(window)
     origen_entry.pack()
 
-    lista_colchones = tk.Button(window, text="Elegir destinos", command=acceder_destinos)
+    lista_colchones = tk.Button(window, text="Elegir destinos", command=ventana_destinos)
     lista_colchones.pack()
     destinos_label = tk.Label(window, text='Vas a ver los destinos aquí!')
     destinos_label.pack()

@@ -5,6 +5,7 @@ from objetos import Logistica
 from objetos import Costo;
 from objetos import Orden;
 
+
 precioNaftaXLitro = 306.1;
 gananciaXHora = 480;
 
@@ -57,20 +58,44 @@ def buscar_vehiculo(vehiculo_a_buscar):
             break
     return(vehiculo_encontrado)
 
+def calculo_carga_descarga(destinos,vehiculo):
 
-def generar_logistica(origen, destino, colchones, vehiculo):
+    def calculo_volumen(tipo):
+        medida_colchon = None
+        if tipo == "1 PLAZA":
+            medida_colchon = 0.59
+        elif tipo == "1.5 PLAZAS":
+            medida_colchon = 0.72
+        elif tipo == "2 PLAZAS":    
+            medida_colchon = 0.9
+        return medida_colchon;
+
+    for i in range(len(destinos)):
+
+        porcentaje_carga = float(destinos[i][1].strip("%")) / 100
+        porcentaje_descarga = float(destinos[i][3].strip("%")) / 100
+        volumen_colchones_carga = calculo_volumen(destinos[i][2]) #Recibe medidas en m3
+        volumen_colchones_descarga = calculo_volumen(destinos[i][4])
+        vehiculo['capacidadDeCarga']
+        volumen_disponible_carga = int(vehiculo['capacidadDeCarga'] * porcentaje_carga);
+        volumen_disponible_descarga = int(vehiculo['capacidadDeCarga'] * porcentaje_descarga);
+        total_colchones_carga = volumen_disponible_carga / volumen_colchones_carga;
+        total_colchones_descarga = volumen_disponible_descarga / volumen_colchones_descarga;
+
+        destinos[i].append([total_colchones_carga, total_colchones_descarga])
+
+        return destinos;
+
+def generar_logistica(origen, destinos, colchones, vehiculo):
     empresa = definir_empresa();
-    print(origen)
-    print(destino)
-
     
     id = len(logisticas)+1;
     nombresDestino = []
-    for sublist in destino:
+    for sublist in destinos:
         nombresDestino.append(sublist[0])
     ruta, distancia, peajes = calculo_ruta(empresa, origen, nombresDestino);
     vehiculoUso = buscar_vehiculo(vehiculo[0]);
-
+    destinos = calculo_carga_descarga(destinos,vehiculoUso);
     consumoTotal = (distancia * vehiculoUso["consumo"]) / 100;
     precioNafta = precioNaftaXLitro * consumoTotal;
     horasViaje = distancia / vehiculoUso["velocidadMedia"];
@@ -82,12 +107,8 @@ def generar_logistica(origen, destino, colchones, vehiculo):
     
     costo = Costo(salario, precioNafta, peajes ,viaticos)
     
-    print(ruta);
-    print(costo);
-    print(horasViaje);
-    print(vehiculoUso["capacidadDeCarga"]);
 
-    logistica = Logistica(id, ruta, costo, horasViaje, vehiculoUso["capacidadDeCarga"])
+    logistica = Logistica(id, ruta, costo, horasViaje, vehiculoUso["capacidadDeCarga"], destinos)
     logisticas.append(logistica)
 
     # Convertir el objeto "ordenes" a formato JSON

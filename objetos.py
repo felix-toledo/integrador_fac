@@ -29,12 +29,13 @@ class Costo:
         self.viatico = viatico
 
 class Logistica:
-    def __init__(self,id, distribucion, costo, tiempo, capacidad):
+    def __init__(self,id, distribucion, costo, tiempo, capacidad, destinos):
         self.id = id
         self.distribucion = distribucion
         self.costo = costo
         self.tiempo = tiempo
         self.capacidad = capacidad
+        self.destinos = destinos
 
 class Orden:
     def __init__(self,id, fecha, origen, destino, colchones, vehiculo, logistica):
