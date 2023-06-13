@@ -22,5 +22,11 @@
         "marca": "PiuLucia",
         "tipo": "1 PLAZA",
         "posicion": "A54"
+    },
+    {
+        "id": 5,
+        "marca": "nuevocolchon",
+        "tipo": "2 PLAZAS",
+        "posicion": "A56"
     }
 ]

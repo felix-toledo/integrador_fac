@@ -11,6 +11,8 @@ unidad_entry = None
 marca_entry = None
 modelo_entry = None
 cdg_entry = None
+consumo_entry = None
+velocidad_entry = None
 # Store the orders in a Python array
 vehiculos = data;
 
@@ -21,8 +23,10 @@ def add_colchon():
     unidad = unidad_entry.get()
     modelo = modelo_entry.get()
     cdg = cdg_entry.get()
+    consumo = consumo_entry.get()
+    velocidad_media = velocidad_entry.get();
     
-    vehiculos.append(Vehiculo(id, unidad, marca, modelo, cdg))
+    vehiculos.append(Vehiculo(id, unidad, marca, modelo, cdg, consumo, velocidad_media))
 
     # Convertir el objeto "ordenes" a formato JSON
     vehiculos_json = json.dumps(vehiculos, default=lambda o: o.__dict__, indent=4)
@@ -85,13 +89,13 @@ def select_vehiculos():
     return selected_vehiculos;
 
 def abm_vehiculos_window(window):
-    global unidad_entry, marca_entry, modelo_entry, cdg_entry
+    global unidad_entry, marca_entry, modelo_entry, cdg_entry, consumo_entry, velocidad_entry
 
     # Create the form components
     titulo_label = tk.Label(window, text="ABM Vehiculos", font=("Arial", 16))
     titulo_label.pack()
 
-    unidad_label = tk.Label(window, text="Marca:")
+    unidad_label = tk.Label(window, text="Unidad:")
     unidad_label.pack()
     unidad_entry = tk.Entry(window)
     unidad_entry.pack()
@@ -110,6 +114,16 @@ def abm_vehiculos_window(window):
     cdg_label.pack()
     cdg_entry = tk.Entry(window)
     cdg_entry.pack()
+
+    consumo_label = tk.Label(window, text="Consumo del vehiculo en L/100KM:")
+    consumo_label.pack()
+    consumo_entry = tk.Entry(window)
+    consumo_entry.pack()
+
+    velocidad_label = tk.Label(window, text="Velocidad media del vehiculo en KM/H:")
+    velocidad_label.pack()
+    velocidad_entry = tk.Entry(window)
+    velocidad_entry.pack()
 
     new_colchon_button = tk.Button(window, text="Agregar Vehiculo", command=add_colchon)
     new_colchon_button.pack()

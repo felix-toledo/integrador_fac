@@ -5,7 +5,7 @@ from objetos import Costo;
 
 
 
-precioNaftaXLitro = 306.1;
+precioNaftaXLitro = 225.7;
 gananciaXHora = 480;
 precioPeaje = 700;
 
@@ -108,14 +108,14 @@ def generar_logistica(origen, destinos, colchones, vehiculo):
     consumoTotal = (distancia * vehiculoUso["consumo"]) / 100;
     precioNafta = precioNaftaXLitro * consumoTotal;
     horasViaje = distancia / vehiculoUso["velocidadMedia"];
-    viaticos = (horasViaje / 8) * 2000;
     descansos = int(horasViaje/9);
-    if descansos > 1:
+    if descansos >= 1:
         horasViaje = horasViaje + (8*descansos);
+    horasViaje = horasViaje * 1.25;
     salario = gananciaXHora * horasViaje;
+    viaticos = (int(horasViaje / 8)) * 2000;
     
     costo = Costo(salario, precioNafta, peajes ,viaticos);
-    
     horasViaje = convertir_a_horas_y_minutos(horasViaje);
     logistica = Logistica(id, ruta, costo, horasViaje, vehiculoUso["capacidadDeCarga"], destinos,distancia);
     logisticas.append(logistica);

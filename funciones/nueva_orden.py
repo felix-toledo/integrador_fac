@@ -96,7 +96,7 @@ def detalles_orden_window(orden):
     costoLabel = tk.Label(window, text="COSTOS", font=("Arial", 12))
     costoLabel.pack()
     treeCosto = ttk.Treeview(window)
-    treeCosto["columns"] = ("Salario", "Combustible", "Peaje", "Viatico")
+    treeCosto["columns"] = ("Salario", "Combustible", "Peaje", "Viatico", "Total")
     treeCosto.config(height=1)
 
     # Define los encabezados de columna
@@ -104,15 +104,17 @@ def detalles_orden_window(orden):
     treeCosto.heading("Combustible", text="Combustible")
     treeCosto.heading("Peaje", text="Peaje")
     treeCosto.heading("Viatico", text="Viatico")
+    treeCosto.heading("Total", text="Total")
 
     # Obtiene los valores de los atributos del objeto Costo
     salario = int(orden.logistica.costo.salario)
     combustible = int(orden.logistica.costo.combustible)
     peaje = int(orden.logistica.costo.peaje)
     viatico = int(orden.logistica.costo.viatico)
+    total = salario+combustible+peaje+viatico;
 
     # Agrega los datos a la tabla
-    treeCosto.insert("", "end", values=(salario, combustible, peaje, viatico))
+    treeCosto.insert("", "end", values=(salario, combustible, peaje, viatico, total))
 
     
     # Empaquetar tabla en la ventana

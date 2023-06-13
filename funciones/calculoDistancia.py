@@ -25,13 +25,15 @@ class Empresa:
 
             ruta = nx.dijkstra_path(self.grafo, origen_actual, destino_actual, weight='weight')
             distancia = nx.dijkstra_path_length(self.grafo, origen_actual, destino_actual, weight='weight')
-            peajes_encontrados += any(self.grafo[u][v]['con_peaje'] for u, v in zip(ruta, ruta[1:]))
             
             ruta_mas_corta.extend(ruta[:-1])
+            peajes_encontrados += any(self.grafo[u][v]['con_peaje'] for u, v in zip(ruta, ruta[1:]))
+
             distancia_total += distancia
 
         ultima_ciudad = destinos[-1]
         distancia_vuelta = nx.dijkstra_path_length(self.grafo, ultima_ciudad, 'Corrientes', weight='weight')
+        peajes_encontrados +=1;
         distancia_total += distancia_vuelta
 
         ruta_mas_corta.append(destinos[-1])

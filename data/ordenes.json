@@ -2324,5 +2324,1021 @@
             ],
             "distancia": 523.2
         }
+    },
+    {
+        "id": 28,
+        "fecha": "14/06/2023",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Empedrado",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Perugorria",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Goya",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Esquina",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 13,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado",
+                "Perugorria",
+                "Goya",
+                "Esquina"
+            ],
+            "costo": {
+                "salario": 5310.857142857143,
+                "combustible": 61181.627499999995,
+                "peaje": 2100,
+                "viatico": 2000
+            },
+            "tiempo": "11HS 3M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Perugorria",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Goya",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Esquina",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ]
+            ],
+            "distancia": 774.5
+        }
+    },
+    {
+        "id": 29,
+        "fecha": "40/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Empedrado",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Perugorria",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Goya",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Esquina",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 14,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado",
+                "Perugorria",
+                "Goya",
+                "Esquina"
+            ],
+            "costo": {
+                "salario": 9150.857142857145,
+                "combustible": 61181.627499999995,
+                "peaje": 2100,
+                "viatico": 2000
+            },
+            "tiempo": "19HS 3M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Perugorria",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Goya",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Esquina",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ]
+            ],
+            "distancia": 774.5
+        }
+    },
+    {
+        "id": 30,
+        "fecha": "28/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Empedrado",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Perugorria",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Goya",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Esquina",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                2,
+                "Raymundo",
+                "2 PLAZAS",
+                "A89"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 15,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado",
+                "Perugorria",
+                "Goya",
+                "Esquina"
+            ],
+            "costo": {
+                "salario": 9150.857142857145,
+                "combustible": 61181.627499999995,
+                "peaje": 2100,
+                "viatico": 4000
+            },
+            "tiempo": "23HS 49M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Perugorria",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Goya",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Esquina",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ]
+            ],
+            "distancia": 774.5
+        }
+    },
+    {
+        "id": 31,
+        "fecha": "30/054",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Empedrado",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Perugorria",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Goya",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Esquina",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                3,
+                "Felixito",
+                "2 PLAZAS",
+                "A95"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 16,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado",
+                "Perugorria",
+                "Goya",
+                "Esquina"
+            ],
+            "costo": {
+                "salario": 10478.57142857143,
+                "combustible": 61181.627499999995,
+                "peaje": 2100,
+                "viatico": 4000
+            },
+            "tiempo": "21HS 49M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Perugorria",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Goya",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Esquina",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ]
+            ],
+            "distancia": 774.5
+        }
+    },
+    {
+        "id": 32,
+        "fecha": "30/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Empedrado",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Perugorria",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Goya",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Esquina",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                3,
+                "Felixito",
+                "2 PLAZAS",
+                "A95"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 17,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado",
+                "Perugorria",
+                "Goya",
+                "Esquina"
+            ],
+            "costo": {
+                "salario": 11438.57142857143,
+                "combustible": 61181.627499999995,
+                "peaje": 2100,
+                "viatico": 4000
+            },
+            "tiempo": "23HS 49M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Perugorria",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Goya",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Esquina",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ]
+            ],
+            "distancia": 774.5
+        }
+    },
+    {
+        "id": 33,
+        "fecha": "60/45",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Empedrado",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Perugorria",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Goya",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ],
+            [
+                "Esquina",
+                "00%",
+                "",
+                "00%",
+                "",
+                [
+                    0.0,
+                    0.0
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                3,
+                "Felixito",
+                "2 PLAZAS",
+                "A95"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 18,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado",
+                "Perugorria",
+                "Goya",
+                "Esquina"
+            ],
+            "costo": {
+                "salario": 11438.57142857143,
+                "combustible": 61181.627499999995,
+                "peaje": 2100,
+                "viatico": 4000
+            },
+            "tiempo": "23HS 49M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Perugorria",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Goya",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    "Esquina",
+                    "00%",
+                    "",
+                    "00%",
+                    "",
+                    [
+                        0.0,
+                        0.0
+                    ]
+                ]
+            ],
+            "distancia": 774.5
+        }
+    },
+    {
+        "id": 34,
+        "fecha": "20/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "100%",
+                "1 PLAZA",
+                "100%",
+                "1.5 PLAZAS",
+                [
+                    161.0169491525424,
+                    131.94444444444446
+                ]
+            ],
+            [
+                "Empedrado",
+                "100%",
+                "2 PLAZAS",
+                "00%",
+                "",
+                [
+                    105.55555555555556,
+                    0.0
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 19,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado"
+            ],
+            "costo": {
+                "salario": 1271.9999999999998,
+                "combustible": 11722.857999999997,
+                "peaje": 2100,
+                "viatico": 0
+            },
+            "tiempo": "2HS 38M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "100%",
+                    "1 PLAZA",
+                    "100%",
+                    "1.5 PLAZAS",
+                    [
+                        161.0169491525424,
+                        131.94444444444446
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "100%",
+                    "2 PLAZAS",
+                    "00%",
+                    "",
+                    [
+                        105.55555555555556,
+                        0.0
+                    ]
+                ]
+            ],
+            "distancia": 148.39999999999998
+        }
     }
 ]

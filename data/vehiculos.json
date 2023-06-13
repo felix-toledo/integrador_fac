@@ -4,7 +4,7 @@
         "unidad": "SPRINTER 516 CDI FURGON 4325XL",
         "marca": "MERCEDES BENZ",
         "modelo": "2022",
-        "capacidadDeCarga": 15.40,
+        "capacidadDeCarga": 15.4,
         "consumo": 9.5,
         "velocidadMedia": 80
     },
@@ -13,7 +13,7 @@
         "unidad": "HYUNDAI HD78",
         "marca": "HYUNDAI",
         "modelo": "2012",
-        "capacidadDeCarga": 9.90,
+        "capacidadDeCarga": 9.9,
         "consumo": 11,
         "velocidadMedia": 75
     },
