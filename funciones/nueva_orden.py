@@ -56,7 +56,7 @@ def detalles_orden_window(orden):
     ruta_label = tk.Label(window, text=textoRuta)
     ruta_label.pack()
 
-    textoTiempo = 'Tiempo estimado: '+ str(int(orden.logistica.tiempo)) +"HS"
+    textoTiempo = 'Tiempo estimado: '+ str(orden.logistica.tiempo)
     textoTiempo_label = tk.Label(window, text=textoTiempo)
     textoTiempo_label.pack()
 
@@ -82,7 +82,6 @@ def detalles_orden_window(orden):
     tree.heading("Cantidad a Cargar", text="Cantidad a Cargar")
     tree.heading("Tipo a Cargar", text="Tipo a Cargar")
     # Agregar datos a la tabla
-    print(orden.logistica.destinos)
     for item in orden.logistica.destinos:
         ciudad = item[0]
         cantidad_descargar = int(item[5][1])
@@ -202,8 +201,6 @@ def guardar_destinos():
             tipo_carga = tipo_carga_entry[i].get()
             tipo_descarga = tipo_descarga_entry[i].get()
             destinos_seleccionados.append([ciudad, carga, tipo_carga, descarga, tipo_descarga ])
-        else:
-            print('no entro')
     destinos_label.config(text=str(destinos_seleccionados))
     destinos_window.destroy()
 
@@ -211,7 +208,6 @@ def ventana_destinos():
     global destinos_window, empresa, destinos_vars;
 
     destinos_window = tk.Tk()
-    print(centros)
     destinos_vars = []  # Mover aquí la creación de las variables IntVar
     
     for i, centro in enumerate(centros):
@@ -286,6 +282,6 @@ def ventana_orden(window):
     add_vehilcle_button = tk.Button(window, text="Importar Vehículo", command=vehiculo_elegido)
     add_vehilcle_button.pack()
 
-    new_order_button = tk.Button(window, text="New Order", command=submit_order)
+    new_order_button = tk.Button(window, text="Agregar Orden", command=submit_order)
     new_order_button.pack()
 

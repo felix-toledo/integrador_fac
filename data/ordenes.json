@@ -1442,5 +1442,887 @@
             ],
             "distancia": 453.0
         }
+    },
+    {
+        "id": 19,
+        "fecha": "28/05/2023",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "25%",
+                "1 PLAZA",
+                "30%",
+                "1.5 PLAZAS",
+                [
+                    38.983050847457626,
+                    38.88888888888889
+                ],
+                [
+                    38.983050847457626,
+                    38.88888888888889
+                ]
+            ],
+            [
+                "Empedrado",
+                "15%",
+                "2 PLAZAS",
+                "25%",
+                "1 PLAZA",
+                [
+                    15.555555555555555,
+                    38.983050847457626
+                ],
+                [
+                    15.555555555555555,
+                    38.983050847457626
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                2,
+                "Raymundo",
+                "2 PLAZAS",
+                "A89"
+            ],
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 4,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado"
+            ],
+            "costo": {
+                "salario": 652.1142857142856,
+                "combustible": 10188.5385,
+                "peaje": 2,
+                "viatico": 339.6428571428571
+            },
+            "tiempo": 1.3585714285714285,
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "25%",
+                    "1 PLAZA",
+                    "30%",
+                    "1.5 PLAZAS",
+                    [
+                        38.983050847457626,
+                        38.88888888888889
+                    ],
+                    [
+                        38.983050847457626,
+                        38.88888888888889
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "15%",
+                    "2 PLAZAS",
+                    "25%",
+                    "1 PLAZA",
+                    [
+                        15.555555555555555,
+                        38.983050847457626
+                    ],
+                    [
+                        15.555555555555555,
+                        38.983050847457626
+                    ]
+                ]
+            ],
+            "distancia": 95.1
+        }
+    },
+    {
+        "id": 20,
+        "fecha": "28/05/2023",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "25%",
+                "1 PLAZA",
+                "30%",
+                "1.5 PLAZAS",
+                [
+                    38.983050847457626,
+                    38.88888888888889
+                ],
+                [
+                    38.983050847457626,
+                    38.88888888888889
+                ]
+            ],
+            [
+                "Empedrado",
+                "15%",
+                "2 PLAZAS",
+                "25%",
+                "1 PLAZA",
+                [
+                    15.555555555555555,
+                    38.983050847457626
+                ],
+                [
+                    15.555555555555555,
+                    38.983050847457626
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                2,
+                "Raymundo",
+                "2 PLAZAS",
+                "A89"
+            ],
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 5,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado"
+            ],
+            "costo": {
+                "salario": 652.1142857142856,
+                "combustible": 10188.5385,
+                "peaje": 2,
+                "viatico": 339.6428571428571
+            },
+            "tiempo": 1.3585714285714285,
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "25%",
+                    "1 PLAZA",
+                    "30%",
+                    "1.5 PLAZAS",
+                    [
+                        38.983050847457626,
+                        38.88888888888889
+                    ],
+                    [
+                        38.983050847457626,
+                        38.88888888888889
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "15%",
+                    "2 PLAZAS",
+                    "25%",
+                    "1 PLAZA",
+                    [
+                        15.555555555555555,
+                        38.983050847457626
+                    ],
+                    [
+                        15.555555555555555,
+                        38.983050847457626
+                    ]
+                ]
+            ],
+            "distancia": 95.1
+        }
+    },
+    {
+        "id": 21,
+        "fecha": "28/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "40%",
+                "1.5 PLAZAS",
+                "50%",
+                "2 PLAZAS",
+                [
+                    52.77777777777778,
+                    52.22222222222222
+                ]
+            ],
+            [
+                "Empedrado",
+                "35%",
+                "1 PLAZA",
+                "45%",
+                "2 PLAZAS",
+                [
+                    55.93220338983051,
+                    46.666666666666664
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 6,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado"
+            ],
+            "costo": {
+                "salario": 652.1142857142856,
+                "combustible": 10188.5385,
+                "peaje": 2,
+                "viatico": 339.6428571428571
+            },
+            "tiempo": 1.3585714285714285,
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "40%",
+                    "1.5 PLAZAS",
+                    "50%",
+                    "2 PLAZAS",
+                    [
+                        52.77777777777778,
+                        52.22222222222222
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "35%",
+                    "1 PLAZA",
+                    "45%",
+                    "2 PLAZAS",
+                    [
+                        55.93220338983051,
+                        46.666666666666664
+                    ]
+                ]
+            ],
+            "distancia": 95.1
+        }
+    },
+    {
+        "id": 22,
+        "fecha": "4/4/2023",
+        "origen": "Corrientes",
+        "destino": [
+            [
+                "Corrientes",
+                "50%",
+                "1.5 PLAZAS",
+                "50%",
+                "1.5 PLAZAS",
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ],
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ],
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                2,
+                "HYUNDAI HD78",
+                "HYUNDAI",
+                2012
+            ]
+        ],
+        "logistica": {
+            "id": 7,
+            "distribucion": [
+                "Corrientes"
+            ],
+            "costo": {
+                "salario": 0.0,
+                "combustible": 0.0,
+                "peaje": 0,
+                "viatico": 0.0
+            },
+            "tiempo": "0HS 0M",
+            "capacidad": 9.9,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "50%",
+                    "1.5 PLAZAS",
+                    "50%",
+                    "1.5 PLAZAS",
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ],
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ],
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ]
+                ]
+            ],
+            "distancia": 0
+        }
+    },
+    {
+        "id": 23,
+        "fecha": "4/4/2023",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "50%",
+                "1.5 PLAZAS",
+                "50%",
+                "1.5 PLAZAS",
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ],
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ],
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                2,
+                "HYUNDAI HD78",
+                "HYUNDAI",
+                2012
+            ]
+        ],
+        "logistica": {
+            "id": 8,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes"
+            ],
+            "costo": {
+                "salario": 219.51999999999998,
+                "combustible": 1154.9153,
+                "peaje": 1,
+                "viatico": 114.33333333333333
+            },
+            "tiempo": "0HS 27M",
+            "capacidad": 9.9,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "50%",
+                    "1.5 PLAZAS",
+                    "50%",
+                    "1.5 PLAZAS",
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ],
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ],
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ]
+                ]
+            ],
+            "distancia": 34.3
+        }
+    },
+    {
+        "id": 24,
+        "fecha": "4/4/2023",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "50%",
+                "1.5 PLAZAS",
+                "50%",
+                "1.5 PLAZAS",
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ],
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ],
+                [
+                    5.555555555555555,
+                    5.555555555555555
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                4,
+                "PiuLucia",
+                "1 PLAZA",
+                "A54"
+            ]
+        ],
+        "vehiculo": [
+            [
+                2,
+                "HYUNDAI HD78",
+                "HYUNDAI",
+                2012
+            ]
+        ],
+        "logistica": {
+            "id": 9,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes"
+            ],
+            "costo": {
+                "salario": 219.51999999999998,
+                "combustible": 1154.9153,
+                "peaje": 1,
+                "viatico": 114.33333333333333
+            },
+            "tiempo": "0HS 27M",
+            "capacidad": 9.9,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "50%",
+                    "1.5 PLAZAS",
+                    "50%",
+                    "1.5 PLAZAS",
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ],
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ],
+                    [
+                        5.555555555555555,
+                        5.555555555555555
+                    ]
+                ]
+            ],
+            "distancia": 34.3
+        }
+    },
+    {
+        "id": 25,
+        "fecha": "28/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "30%",
+                "1.5 PLAZAS",
+                "30%",
+                "2 PLAZAS",
+                [
+                    38.88888888888889,
+                    31.11111111111111
+                ]
+            ],
+            [
+                "Empedrado",
+                "40%",
+                "2 PLAZAS",
+                "35%",
+                "1.5 PLAZAS",
+                [
+                    42.22222222222222,
+                    45.833333333333336
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                1,
+                "Canon",
+                "2 PLAZAS",
+                "A84"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 10,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado"
+            ],
+            "costo": {
+                "salario": 1069.0285714285712,
+                "combustible": 16702.3465,
+                "peaje": 2,
+                "viatico": 556.7857142857142
+            },
+            "tiempo": "2HS 13M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "30%",
+                    "1.5 PLAZAS",
+                    "30%",
+                    "2 PLAZAS",
+                    [
+                        38.88888888888889,
+                        31.11111111111111
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "40%",
+                    "2 PLAZAS",
+                    "35%",
+                    "1.5 PLAZAS",
+                    [
+                        42.22222222222222,
+                        45.833333333333336
+                    ]
+                ]
+            ],
+            "distancia": 155.89999999999998
+        }
+    },
+    {
+        "id": 26,
+        "fecha": "28/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "05%",
+                "1 PLAZA",
+                "10%",
+                "1 PLAZA",
+                [
+                    6.779661016949153,
+                    15.254237288135593
+                ]
+            ],
+            [
+                "Empedrado",
+                "00%",
+                "",
+                "25%",
+                "1.5 PLAZAS",
+                [
+                    0.0,
+                    31.944444444444446
+                ]
+            ],
+            [
+                "Perugorria",
+                "00%",
+                "",
+                "15%",
+                "1.5 PLAZAS",
+                [
+                    0.0,
+                    19.444444444444446
+                ]
+            ],
+            [
+                "Goya",
+                "05%",
+                "1.5 PLAZAS",
+                "30%",
+                "1.5 PLAZAS",
+                [
+                    5.555555555555555,
+                    38.88888888888889
+                ]
+            ],
+            [
+                "Esquina",
+                "05%",
+                "2 PLAZAS",
+                "100%",
+                "2 PLAZAS",
+                [
+                    4.444444444444445,
+                    105.55555555555556
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                2,
+                "Raymundo",
+                "2 PLAZAS",
+                "A89"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 11,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado",
+                "Perugorria",
+                "Goya",
+                "Esquina"
+            ],
+            "costo": {
+                "salario": 5427.428571428572,
+                "combustible": 84797.3525,
+                "peaje": 1400,
+                "viatico": 2826.785714285714
+            },
+            "tiempo": "11HS 18M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "05%",
+                    "1 PLAZA",
+                    "10%",
+                    "1 PLAZA",
+                    [
+                        6.779661016949153,
+                        15.254237288135593
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "00%",
+                    "",
+                    "25%",
+                    "1.5 PLAZAS",
+                    [
+                        0.0,
+                        31.944444444444446
+                    ]
+                ],
+                [
+                    "Perugorria",
+                    "00%",
+                    "",
+                    "15%",
+                    "1.5 PLAZAS",
+                    [
+                        0.0,
+                        19.444444444444446
+                    ]
+                ],
+                [
+                    "Goya",
+                    "05%",
+                    "1.5 PLAZAS",
+                    "30%",
+                    "1.5 PLAZAS",
+                    [
+                        5.555555555555555,
+                        38.88888888888889
+                    ]
+                ],
+                [
+                    "Esquina",
+                    "05%",
+                    "2 PLAZAS",
+                    "100%",
+                    "2 PLAZAS",
+                    [
+                        4.444444444444445,
+                        105.55555555555556
+                    ]
+                ]
+            ],
+            "distancia": 791.5
+        }
+    },
+    {
+        "id": 27,
+        "fecha": "10/02/2023",
+        "origen": "Corrientes",
+        "destino": [
+            [
+                "Puerto Tirol",
+                "40%",
+                "2 PLAZAS",
+                "35%",
+                "2 PLAZAS",
+                [
+                    42.22222222222222,
+                    36.666666666666664
+                ]
+            ],
+            [
+                "Empedrado",
+                "30%",
+                "1.5 PLAZAS",
+                "40%",
+                "2 PLAZAS",
+                [
+                    38.88888888888889,
+                    42.22222222222222
+                ]
+            ],
+            [
+                "Perugorria",
+                "45%",
+                "2 PLAZAS",
+                "30%",
+                "2 PLAZAS",
+                [
+                    46.666666666666664,
+                    31.11111111111111
+                ]
+            ]
+        ],
+        "colchones": [],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 12,
+            "distribucion": [
+                "Corrientes",
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado",
+                "Perugorria"
+            ],
+            "costo": {
+                "salario": 3587.6571428571433,
+                "combustible": 56053.03200000001,
+                "peaje": 1400,
+                "viatico": 1868.5714285714287
+            },
+            "tiempo": "7HS 28M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Puerto Tirol",
+                    "40%",
+                    "2 PLAZAS",
+                    "35%",
+                    "2 PLAZAS",
+                    [
+                        42.22222222222222,
+                        36.666666666666664
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "30%",
+                    "1.5 PLAZAS",
+                    "40%",
+                    "2 PLAZAS",
+                    [
+                        38.88888888888889,
+                        42.22222222222222
+                    ]
+                ],
+                [
+                    "Perugorria",
+                    "45%",
+                    "2 PLAZAS",
+                    "30%",
+                    "2 PLAZAS",
+                    [
+                        46.666666666666664,
+                        31.11111111111111
+                    ]
+                ]
+            ],
+            "distancia": 523.2
+        }
     }
 ]
