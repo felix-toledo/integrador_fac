@@ -3,8 +3,6 @@ import json
 from objetos import Logistica
 from objetos import Costo;
 
-
-
 precioNaftaXLitro = 225.7;
 gananciaXHora = 480;
 precioPeaje = 700;

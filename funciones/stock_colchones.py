@@ -4,45 +4,47 @@ import tkinter as tk;
 from tkinter import ttk
 from tkinter import messagebox
 
+# Traigo toda la data que esta en colchones.json y lo guardo en un array colchones.
 with open('./data/colchones.json') as json_file:
-    data = json.load(json_file)
+    colchones = json.load(json_file)
 
+# Variables globales
 marca_entry = None
 tipo_entry = None
 posicion_entry = None
 
-# Store the orders in a Python array
-colchones = data;
-
+# Funcion que va a anadir un colchon (usando el objeto colchon) nuevo al array colchones y posteriormente, lo guarda en el json.
 def add_colchon():
-    # Get the values from the input fields
     id = len(colchones)+1;
     marca = marca_entry.get()
     tipo = tipo_entry.get()
     posicion = posicion_entry.get()
     
     colchones.append(Colchon(id, marca, tipo, posicion))
-
-    # Convertir el objeto "ordenes" a formato JSON
+    # Convertir el objeto "colchones" a formato JSON
     colchones_json = json.dumps(colchones, default=lambda o: o.__dict__, indent=4)
 
     # Especificar la ruta del archivo JSON
     ruta_archivo = "./data/colchones.json"
 
-    # Guardar el objeto "ordenes" en el archivo JSON
+    # Guardar el objeto "colchones" en el archivo JSON
     with open(ruta_archivo, "w") as archivo:
         archivo.write(colchones_json)
     
-    # Display the order details in a message box
+    # Muestra que se creo el colchon satisfactoriamente con un messagebox.
     colchon_details = f"Marca: {marca}\nTipo: {tipo}\nPosicion: {posicion}"
     messagebox.showinfo("Colchon agregado", colchon_details)
 
+# Ventana que voy a llamar cuando este crando una nueva orden, voy a poder ver la lista de todos los colchones para poder seleccionar.
+# Esta ventana, retorna los colchones seleccionados.
 def select_colchones():
     with open('./data/colchones.json') as json_file:
         colchones = json.load(json_file)
         
+    # Creo el array selected_colchones que va a ir guardando los colchones seleccionados
     selected_colchones = []
 
+    # Agrega el colchon seleccionado de la lista a selected_colchones.
     def add_colchon():
         selected_colchones.append(tree.item(tree.focus())['values'])
         state_lavel.config(text="Agregado")
@@ -50,7 +52,7 @@ def select_colchones():
     def finish_selection():
         selector_colchones.destroy()
         
-
+    # Creo la nueva ventana con una tabla adentro.
     selector_colchones = tk.Tk()
     selector_colchones.title("Elegir Colchones")
     selector_colchones.geometry("1250x500")
@@ -62,6 +64,7 @@ def select_colchones():
     tree.heading("Tipo", text="Tipo")
     tree.heading("Posición", text="Posición")
 
+    # Muestro todos los colchones existentes en la tabla.
     for i, colchon_data in enumerate(colchones):
         colchon = Colchon(colchon_data["id"], colchon_data["marca"], colchon_data["tipo"], colchon_data["posicion"])
         tree.insert("", "end", values=(colchon.id, colchon.marca, colchon.tipo, colchon.posicion))
@@ -76,16 +79,13 @@ def select_colchones():
 
     state_lavel = ttk.Label(selector_colchones, text="");
     state_lavel.pack()
-
     
     return selected_colchones;
     
-
-
+# Esta es la sección que existe para dar de alta un colchon nuevo. Completamos el formulario y damos click en agregar colchon.
 def stock_colchones_window(window):
     global marca_entry, tipo_entry, posicion_entry
 
-    # Create the form components
     titulo_label = tk.Label(window, text="ABM Colchones", font=("Arial", 16))
     titulo_label.pack()
 

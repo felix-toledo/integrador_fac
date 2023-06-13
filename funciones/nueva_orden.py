@@ -1,4 +1,5 @@
-#Esta función sirve para crear una nueva orden.
+# Este es uno de los archivos mas importantes ya que con este vamos a crear una nueva orden.
+
 from objetos import Colchon;
 from objetos import Orden;
 import json;
@@ -8,7 +9,6 @@ from tkinter import messagebox;
 from funciones.stock_colchones import select_colchones;
 from funciones.abm_vehiculos import select_vehiculos;
 from funciones.logistica import generar_logistica, definir_empresa;
-
 
 # Defino los entrys de manera global, ya que si no, estarían guardados dentro de una función y sería dificil acceder a ellos.
 fecha_entry = None 
@@ -31,15 +31,13 @@ destinos_seleccionados = []
 empresa = definir_empresa()
 centros = empresa.grafo.nodes
 
-
+# Ventana que será llamada cuando creemos una orden. Esta va a mostrar todos los datos importantes de logística de la nueva orden.
 def detalles_orden_window(orden):
-
     window = tk.Tk()
     window.title("EXUN S.A.")
     window.geometry("300x600")
     window.wm_iconbitmap('camion.ico')
     
-    # Creo el form en la UI
     text = "Orden número: " +str(orden.id)
     titulo_label = tk.Label(window, text=text, font=("Arial", 10))
     titulo_label.pack()
@@ -68,20 +66,17 @@ def detalles_orden_window(orden):
     vehiculo_label = tk.Label(window, text=textoVehiculo)
     vehiculo_label.pack()
 
-    # Crear tabla
     table_label = tk.Label(window, text="DISTRIBUCIÓN", font=("Arial", 12))
     table_label.pack();
     tree = ttk.Treeview(window)
     tree["columns"] = ("Ciudad", "Cantidad a Descargar", "Tipo a Descargar", "Cantidad a Cargar", "Tipo a Cargar")
 
-
-    # Definir encabezados de columna
     tree.heading("Ciudad", text="Ciudad")
     tree.heading("Cantidad a Descargar", text="Cantidad a Descargar")
     tree.heading("Tipo a Descargar", text="Tipo a Descargar")
     tree.heading("Cantidad a Cargar", text="Cantidad a Cargar")
     tree.heading("Tipo a Cargar", text="Tipo a Cargar")
-    # Agregar datos a la tabla
+    
     for item in orden.logistica.destinos:
         ciudad = item[0]
         cantidad_descargar = int(item[5][1])
@@ -90,9 +85,9 @@ def detalles_orden_window(orden):
         tipo_cargar = item[2]
         tree.insert("", "end", values=(ciudad, cantidad_descargar, tipo_descargar, cantidad_cargar, tipo_cargar))
 
-    # Empaqueta la tabla en la ventana
     tree.pack()
 
+    # Esta y todas las tablas (treeview) va a ser definidas.
     costoLabel = tk.Label(window, text="COSTOS", font=("Arial", 12))
     costoLabel.pack()
     treeCosto = ttk.Treeview(window)
@@ -115,11 +110,9 @@ def detalles_orden_window(orden):
 
     # Agrega los datos a la tabla
     treeCosto.insert("", "end", values=(salario, combustible, peaje, viatico, total))
-
     
     # Empaquetar tabla en la ventana
     treeCosto.pack()
-
 
 # Traigo el json de ordenes.
 with open('./data/ordenes.json') as json_file:
@@ -154,11 +147,12 @@ def submit_order():
     with open(ruta_archivo, "w") as archivo:
         archivo.write(ordenes_json)
     
-
+# Esta funcion es llamada desde el boton de elegir colchones y llama a la funcion select_colchones que va a hacer la ventana especificada que explicamos más arriba.
 def colchones_elegidos():
     global colchonesElegidos;
     colchonesElegidos = select_colchones();
     
+# Ventana para ver los colchones que estamos por distribuir, en caso de no tener colchones elegidos, nos tira un aviso de que primero hay que importar.
 def colchones_distribuir():
     if colchonesElegidos == None:
         messagebox.showinfo("NO HAY COLCHONES", 'Primero necesitas importar colchones')
@@ -179,7 +173,8 @@ def colchones_distribuir():
             tree.insert("", "end", values=(colchon.id, colchon.marca, colchon.tipo, colchon.posicion))
 
         tree.pack()
-    
+
+# Ventana que es llamada cuando se apreta el boton de 
 def vehiculo_elegido():
     global vehiculoElegido;
     if vehiculoElegido == None:
@@ -187,6 +182,7 @@ def vehiculo_elegido():
     else:
         vehiculoElegido = select_vehiculos();
 
+# Pone en el label el vehiculo elegido una vez que ya lo importamos
 def vehiculo_ya_elegido():
     global vehiculo_elegido_label
     vehiculo_elegido_label.config(text=vehiculoElegido[0][1])

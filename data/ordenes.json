@@ -3340,5 +3340,258 @@
             ],
             "distancia": 148.39999999999998
         }
+    },
+    {
+        "id": 35,
+        "fecha": "28/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "15%",
+                "1 PLAZA",
+                "30%",
+                "2 PLAZAS",
+                [
+                    23.728813559322035,
+                    31.11111111111111
+                ]
+            ],
+            [
+                "Empedrado",
+                "40%",
+                "2 PLAZAS",
+                "40%",
+                "1.5 PLAZAS",
+                [
+                    42.22222222222222,
+                    52.77777777777778
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                1,
+                "Canon",
+                "2 PLAZAS",
+                "A84"
+            ],
+            [
+                2,
+                "Raymundo",
+                "2 PLAZAS",
+                "A89"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 20,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado"
+            ],
+            "costo": {
+                "salario": 1271.9999999999998,
+                "combustible": 11722.857999999997,
+                "peaje": 2100,
+                "viatico": 0
+            },
+            "tiempo": "2HS 38M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "15%",
+                    "1 PLAZA",
+                    "30%",
+                    "2 PLAZAS",
+                    [
+                        23.728813559322035,
+                        31.11111111111111
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "40%",
+                    "2 PLAZAS",
+                    "40%",
+                    "1.5 PLAZAS",
+                    [
+                        42.22222222222222,
+                        52.77777777777778
+                    ]
+                ]
+            ],
+            "distancia": 148.39999999999998
+        }
+    },
+    {
+        "id": 36,
+        "fecha": "12/12/22",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "20%",
+                "1 PLAZA",
+                "20%",
+                "1 PLAZA",
+                [
+                    5.084745762711865,
+                    5.084745762711865
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                3,
+                "Felixito",
+                "2 PLAZAS",
+                "A95"
+            ],
+            [
+                7,
+                "nuevoColchoncito",
+                "1 PLAZA",
+                "A95"
+            ]
+        ],
+        "vehiculo": [
+            [
+                1,
+                "SPRINTER 516 CDI FURGON 4325XL",
+                "MERCEDES BENZ",
+                2022
+            ]
+        ],
+        "logistica": {
+            "id": 21,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes"
+            ],
+            "costo": {
+                "salario": 201.0,
+                "combustible": 574.6321999999999,
+                "peaje": 1400,
+                "viatico": 0
+            },
+            "tiempo": "0HS 25M",
+            "capacidad": 15.4,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "20%",
+                    "1 PLAZA",
+                    "20%",
+                    "1 PLAZA",
+                    [
+                        5.084745762711865,
+                        5.084745762711865
+                    ]
+                ]
+            ],
+            "distancia": 26.8
+        }
+    },
+    {
+        "id": 37,
+        "fecha": "28/05",
+        "origen": "Puerto Tirol",
+        "destino": [
+            [
+                "Corrientes",
+                "25%",
+                "2 PLAZAS",
+                "25%",
+                "1.5 PLAZAS",
+                [
+                    25.555555555555554,
+                    31.944444444444446
+                ]
+            ],
+            [
+                "Empedrado",
+                "25%",
+                "1.5 PLAZAS",
+                "45%",
+                "1 PLAZA",
+                [
+                    31.944444444444446,
+                    71.1864406779661
+                ]
+            ]
+        ],
+        "colchones": [
+            [
+                1,
+                "Canon",
+                "2 PLAZAS",
+                "A84"
+            ],
+            [
+                3,
+                "Felixito",
+                "2 PLAZAS",
+                "A95"
+            ]
+        ],
+        "vehiculo": [
+            [
+                3,
+                "TRACTOR SCANIA R340",
+                "SCANIA",
+                2007
+            ]
+        ],
+        "logistica": {
+            "id": 22,
+            "distribucion": [
+                "Puerto Tirol",
+                "Corrientes",
+                "Empedrado"
+            ],
+            "costo": {
+                "salario": 1271.9999999999998,
+                "combustible": 11722.857999999997,
+                "peaje": 2100,
+                "viatico": 0
+            },
+            "tiempo": "2HS 38M",
+            "capacidad": 95.55,
+            "destinos": [
+                [
+                    "Corrientes",
+                    "25%",
+                    "2 PLAZAS",
+                    "25%",
+                    "1.5 PLAZAS",
+                    [
+                        25.555555555555554,
+                        31.944444444444446
+                    ]
+                ],
+                [
+                    "Empedrado",
+                    "25%",
+                    "1.5 PLAZAS",
+                    "45%",
+                    "1 PLAZA",
+                    [
+                        31.944444444444446,
+                        71.1864406779661
+                    ]
+                ]
+            ],
+            "distancia": 148.39999999999998
+        }
     }
 ]

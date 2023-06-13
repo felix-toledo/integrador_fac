@@ -10,6 +10,7 @@ from tkinter import messagebox
 import json
 import os
 
+# Defino variables globales que voy a utilizar en el window, posteriormente llamare a los valores que contienen estas variables.
 root = None
 username_entry = None 
 password_entry = None
@@ -18,13 +19,14 @@ def login():
     username = username_entry.get()
     password = password_entry.get()
 
-    # Verificar las credenciales en users.json
+    # Verificar las credenciales con check_credentials si esta bien entra al sistema, si no.. Error.
     if check_credentials(username, password):
-        root.destroy()  # Cerrar la ventana de inicio de sesión
-        ventana_principal()
+        root.destroy() 
+        ventana_principal() 
     else:
         messagebox.showerror("Error", "Credenciales inválidas")
 
+# Funcion que retorna t o f dependiendo de si username y password se encuentra en users.json o no.
 def check_credentials(username, password):
     if not os.path.exists("./data/users.json"):
         return False
@@ -34,6 +36,7 @@ def check_credentials(username, password):
 
     return username in users and users[username] == password
 
+# Creo la interfaz de inicio sesion.
 def sesion_window():
     global username_entry, password_entry, root
     
@@ -59,9 +62,8 @@ def sesion_window():
 
     root.mainloop()
 
-
+# Creo la ventana principal
 def ventana_principal():
-    # Crear la ventana principal
     main_window = tk.Tk()
     main_window.title("EXUN S.A.")
     main_window.geometry("500x500")
@@ -91,5 +93,6 @@ def ventana_principal():
 
     # Ejecutar el bucle principal de la aplicación
     main_window.mainloop()
-    
+
+# Llamo a sesion window, va a ser la funcion que INICIA EL SISTEMA
 sesion_window();

@@ -28,5 +28,17 @@
         "marca": "nuevocolchon",
         "tipo": "2 PLAZAS",
         "posicion": "A56"
+    },
+    {
+        "id": 6,
+        "marca": "nuevoColchoncito",
+        "tipo": "2 PLAZAS",
+        "posicion": "asd"
+    },
+    {
+        "id": 7,
+        "marca": "nuevoColchoncito",
+        "tipo": "1 PLAZA",
+        "posicion": "A95"
     }
 ]

@@ -1,3 +1,5 @@
+# En este archivo, creo todos los objetos que voy a utilizar en todo el sistema.
+
 class Colchon:
     def __init__(self,id, marca, tipo, posicion):
         self.id = id
@@ -15,16 +17,6 @@ class Vehiculo:
         self.consumo = consumo
         self.velocidad = velocidadMedia
         
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "unidad": self.unidad,
-            "marca": self.marca,
-            "modelo": self.modelo,
-            "capacidadDeCarga": self.cdg,
-            "consumo": self.consumo,
-            "velocidadMedia": self.velocidad_media,
-        }
 
 class Destino:
     def __init__(self, nombre, carga, descarga):
